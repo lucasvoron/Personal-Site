@@ -11,7 +11,7 @@ import Navbar from './components/Navbar.js';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
     <Navbar />
     <Routes>
         <Route path='/' element={<Information />} />
