@@ -1,8 +1,8 @@
 /* GLOBAL */
 .company-logo {
-  margin: 5px;
+  margin: 5px 5px 5px 10px;
   height: calc(40px + 1vmin);
-  width: calc(40px + 1vmin);
+  width: calc(32px + 1vmin);
 }
 
 h1 {
@@ -10,12 +10,12 @@ h1 {
 }
 
 h2 {
-  color:#ffffff;
+  color:#012622;
 }
 
 /* NAVBAR */
 .navbar-content-area {
-  background-color: #ffffff;
+  background-color: #012622;
   height: 64px;
   min-width: 98vw;
   padding-left: 1vw;
@@ -42,7 +42,7 @@ h2 {
   font-size: calc(6px + 1vmin);
   font-weight: 300;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 .navbar-company-logo-text {
@@ -52,7 +52,7 @@ h2 {
   font-weight: bolder;
   font-style: italic;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
 }
 
 /* LANDING */
@@ -60,7 +60,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color:#282c34;
+  background-color:#F4F3EE;
   padding: 25px 50px 25px 50px;
 }
 
@@ -89,8 +89,18 @@ h2 {
   margin: 15px 30px 50px 30px;
 }
 
+.landing-name-title {
+  color: #003b36;
+  font-size: calc(50px + 1vmin);
+  font-weight: 800;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  width: 100%;
+  min-width: 150px;
+}
+
 .landing-top-title {
-  color: #ffffff;
+  color: #3B1F2B;
   font-size: calc(18px + 1vmin);
   font-weight: bolder;
   margin-bottom: 30px;
@@ -100,7 +110,7 @@ h2 {
 }
 
 .landing-top-text {
-  color: #ffffff;
+  color: #003b36;
   font-size: calc(10px + 1vmin);
   margin-left: 30px;
   margin-right: 30px;
@@ -109,7 +119,7 @@ h2 {
 }
 
 .landing-bottom-text {
-  color: #ffffff;
+  color: #003b36;
   font-size: calc(10px + 1vmin);
   margin-left: 30px;
   margin-right: 30px;
@@ -129,6 +139,7 @@ h2 {
 
 .landing-tiles-container {
   background-color: #ffffff;
+  width: 80%;
   min-width: 100vw;
   display: flex;
   flex-direction: row;
@@ -139,10 +150,24 @@ h2 {
 }
 
 .landing-tile {
-  margin: 15px 30px 15px 30px;
+  margin: 35px 50px 35px 50px;
   display: flex;
-  width: 400px;
-  height: auto;
+  width: 350px;
+  height: 250px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: #3B1F2B;
+}
+
+.landing-tile-text {
+  position: absolute;
+  display: flex;
+  color: #F4F3EE;
+  font-size: calc(26px + 1vmin);
+  font-weight: bolder;
+  max-width: 300px;
+  text-align: center;
 }
 
 .landing-left {
@@ -239,6 +264,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:#012622;
 }
 
 .modal-content {
@@ -246,11 +272,12 @@ h2 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #6cae76;
+  background-color: #F4F3EE;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
+  color:#3B1F2B;
 }

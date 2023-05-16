@@ -1,23 +1,31 @@
 import '../App.css';
-import recycle from '../assets/recycle.png';
+import LSV from '../assets/LSV.png';
 import {Link} from "react-router-dom";
 
 const pages = [
     {
-        name: 'Information',
-        link: '/',
+        name: 'About Me',
+        link: '/about',
     },
     {
-        name: 'Idea',
-        link: '/idea',
+        name: 'Experience',
+        link: '/experience',
     },
     {
-        name: 'Tutorial',
-        link: '/tutorial',
+        name: 'Projects',
+        link: '/projects',
     },
     {
-        name: 'FAQ',
-        link: '/faq',
+        name: 'Coursework',
+        link: '/coursework',
+    },
+    {
+        name: 'Leadership',
+        link: '/leadership',
+    },
+    {
+        name: 'Awards',
+        link: '/awards',
     },
 ]
 
@@ -27,8 +35,8 @@ function Navbar() {
         <div className="navbar-containers">
             <div className="navbar-page-titles-container">
                 {/* <img src={logo} className="company-logo" alt="logo" /> */}
-                <Link to='/'> <img src={recycle} className="company-logo" alt="logo"/> </Link>
-                <Link to='/' className="navbar-company-logo-text">Waste Management</Link>
+                <Link to='/'> <img src={LSV} className="company-logo" alt="logo"/> </Link>
+                <Link to='/' className="navbar-company-logo-text">UI/UX Engineer</Link>
             </div>
             <div className="navbar-page-titles-container">
                 {pages.map((item, index)=>{
