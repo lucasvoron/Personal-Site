@@ -30,6 +30,7 @@ function Information() {
           <div className="landing-left-container">
             <div className="landing-top-content">
               <div className="landing-name-title">LUCAS VORON</div>
+              <div className="landing-subtitle">UI/UX Engineer</div>
             </div>
             <div className="landing-middle-content">
               <div className="landing-top-title">Mission</div>

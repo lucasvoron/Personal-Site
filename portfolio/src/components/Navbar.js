@@ -36,7 +36,7 @@ function Navbar() {
             <div className="navbar-page-titles-container">
                 {/* <img src={logo} className="company-logo" alt="logo" /> */}
                 <Link to='/'> <img src={LSV} className="company-logo" alt="logo"/> </Link>
-                <Link to='/' className="navbar-company-logo-text">UI/UX Engineer</Link>
+                {/* <Link to='/' className="navbar-company-logo-text">UI/UX Engineer</Link> */}
             </div>
             <div className="navbar-page-titles-container">
                 {pages.map((item, index)=>{
