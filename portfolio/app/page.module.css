@@ -1,0 +1,342 @@
+.page {
+  --gray-rgb: 0, 0, 0;
+  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
+  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
+  --button-primary-hover: #383838;
+  --button-secondary-hover: #f2f2f2;
+  background: #000;
+  min-height: 100svh;
+  width: 100vw;
+  padding: 0;
+  font-family: var(--font-geist-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --gray-rgb: 255, 255, 255;
+    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+  }
+}
+
+
+.mainSplit {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+}
+
+.leftPane {
+  flex: 1;
+  width: 60%;
+  align-items: start;
+  justify-content: center;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 100px;
+}
+
+.heroName {
+  display: flex;
+  color: #fff;
+  font-size: 5.5vw;
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.description {
+  color: #fff;
+  font-size: 2vw;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.education {
+  color: #fff;
+  font-size: 1vw;
+  font-weight: 100;
+}
+
+.mantra {
+  margin: 40px 0 0 0;
+  color: #7BCBCC;
+  font-size: 1.7vw;
+  font-weight: 100;
+}
+
+.rightPane {
+  flex: 1;
+  display: flex;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 0 100px 0 0;
+}
+
+.threeContainer {
+  width: 80%;
+  height: 80%;
+  min-width: 300px;
+  min-height: 300px;
+}
+
+.threeContainer :hover {
+  cursor: pointer;
+}
+
+.main ol {
+  font-family: var(--font-geist-mono);
+  padding-left: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  list-style-position: inside;
+}
+
+.main li:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.main code {
+  font-family: inherit;
+  background: var(--gray-alpha-100);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.body code {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ctas {
+  display: flex;
+  gap: 16px;
+}
+
+.ctas a {
+  appearance: none;
+  border-radius: 128px;
+  height: 48px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+a.primary {
+  background: var(--foreground);
+  color: var(--background);
+  gap: 8px;
+}
+
+a.secondary {
+  border-color: var(--gray-alpha-200);
+  min-width: 158px;
+}
+
+.footer {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  background: transparent;
+  padding: 20px 0;
+}
+
+.footer a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer img {
+  flex-shrink: 0;
+}
+
+/* Image Container */
+.floatingImageSection {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0 100px 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.floatingImageDivider {
+  height: 0px;
+  width: 100%;
+}
+
+/* Make homepage images black & white by default, restore color on hover */
+.page img,
+.page .floatingImage {
+  filter: grayscale(100%) contrast(1) brightness(0.95);
+  transition: filter 280ms ease, transform 200ms ease;
+}
+
+/* When hovering the image or its link, remove the filter */
+.page .imageWrapper:hover .floatingImage,
+.page .imageLink:hover .floatingImage,
+.page .imageLink:focus .floatingImage {
+  filter: none;
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 32px;
+    padding-bottom: 80px;
+  }
+
+  .main {
+    align-items: center;
+  }
+
+  .main ol {
+    text-align: center;
+  }
+
+  .ctas {
+    flex-direction: column;
+  }
+
+  .ctas a {
+    font-size: 14px;
+    height: 40px;
+    padding: 0 16px;
+  }
+
+  a.secondary {
+    min-width: auto;
+  }
+
+  .footer {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Responsive: stack hero and three.js on narrow screens */
+@media (max-width: 786px) {
+  .mainSplit {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .leftPane {
+    width: 100%;
+    padding: 40px 24px;
+    align-items: flex-start;
+  }
+
+  .rightPane {
+    width: 100%;
+    padding: 24px 24px 24px 24px;
+    order: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rightPane canvas {
+    width: calc(100% - 48px) !important;
+    height: auto;
+  }
+
+  .threeContainer {
+    width: 100%;
+    height: 40vh;
+    min-height: 220px;
+    max-height: 420px;
+    margin: 20px 0 40px 0;
+  }
+
+  .heroName { font-size: 9vw; }
+  .description { font-size: 4.5vw; }
+  .education { font-size: 3.5vw; }
+  .mantra { font-size: 4vw; }
+  .mainSplit > * { box-sizing: border-box; }
+}
+
+/* Reduce vertical spacing for floating image sections and three.js on small screens */
+@media (max-width: 900px) {
+  .floatingImageSection {
+    margin: 60px 0 60px 0;
+    height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .threeContainer {
+    height: 34vh;
+    min-height: 180px;
+    max-height: 360px;
+    margin: 12px 0 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .floatingImageSection {
+    margin: 40px 0 40px 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .threeContainer {
+    height: 28vh;
+    min-height: 140px;
+    max-height: 300px;
+    margin: 10px 0 16px 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .floatingImageSection { margin: 28px 0 28px 0; }
+  .threeContainer { height: 24vh; min-height: 120px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+}

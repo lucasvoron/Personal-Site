@@ -1,0 +1,66 @@
+.inrixContainer {
+  padding: 30px 24px 40px 24px;
+}
+
+.mainColumn {
+  /* Use explicit column layout; avoid !important by relying on module-specific rules. */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 30px 50px 100px 50px;
+}
+
+.companyName {
+  color: #fff;
+  font-size: 5rem; /* Largest font for company name */
+  font-weight: 100;
+  margin: 0 0 12px 0;
+}
+
+.jobSection {
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0 60px 0;
+}
+
+.jobTitle {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 200;
+  margin: 0 0 8px 0;
+}
+
+.date {
+  color: #ddd;
+  font-size: 1.5rem; /* Largest font for company name */
+  font-weight: 100;
+  margin: 0 0 12px 0;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+.paragraph {
+  color: #ddd;
+  max-width: 1000px;
+  line-height: 1.6;
+}
+
+.metricBox {
+  margin-top: 24px;
+  background: #111;
+  padding: 18px;
+  border-radius: 8px;
+  max-width: 1000px;
+}
+
+.metricTitle {
+  margin: 0;
+  color: #243775;
+}
+
+.metricText {
+  color: #fff;
+  font-size: 1rem;
+  margin-top: 8px;
+}

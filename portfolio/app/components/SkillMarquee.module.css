@@ -1,0 +1,67 @@
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+  padding: 12px 0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  margin: 16px 0 28px 0;
+}
+
+.marqueeInner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  transform: translateX(0);
+  animation: scrollLeft 18s linear infinite;
+  flex-wrap: nowrap;
+}
+
+.marquee:hover .marqueeInner {
+  animation-play-state: paused;
+}
+
+.skillRow {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.skillItem {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: #e6e6e6;
+  font-weight: 100;
+  letter-spacing: 0.06em;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.ledDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 0%;
+  background: #fff;
+  animation: flicker 1.8s linear infinite;
+}
+
+.skillText {
+  font-size: 1.05rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  40% { opacity: 0.85; }
+  60% { opacity: 1; }
+  100% { opacity: 0.9; }
+}

@@ -1,0 +1,45 @@
+.wrapper {
+  position: fixed;
+  left: 3%;
+  top: 0;
+  height: 100vh;
+  width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9997;
+  pointer-events: none; /* allow clicks through */
+}
+
+.track {
+  position: relative;
+  width: 2px;
+  height: 80vh;
+  max-height: calc(100vh - 120px);
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7BCBCC; /* site accent */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  transition: transform 160ms linear;
+  pointer-events: none;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 300ms ease;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
