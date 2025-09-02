@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 40px 0;
+  background: transparent;
+  color: #ddd;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer p {
+  margin: 0;
+  color: #ddd;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: underline;
+}
