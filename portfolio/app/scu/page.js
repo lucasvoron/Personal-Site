@@ -20,7 +20,7 @@ export default function ScuPage() {
           </p>
           <div className={styles.metricBox}>
             <h3 className={styles.metricTitle}>Career Development</h3>
-            <p className={styles.metricText}>Enhanced 300+ students' career readiness through workshops and one-on-one coaching.</p>
+            <p className={styles.metricText}>Enhanced 300+ students&apos; career readiness through workshops and one-on-one coaching.</p>
           </div>
         </div>
 

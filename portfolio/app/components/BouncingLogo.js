@@ -10,10 +10,11 @@ export default function BouncingLogo({ src = "/dvd.png", size = 80, speed = 0.1 
   const vel = useRef({ x: 0.3 * speed, y: 0.3 * speed });
   const raf = useRef(null);
   const pathname = usePathname();
-  // show only on the root index page
-  if (typeof pathname === "string" && pathname !== "/") return null;
+  // decide whether to show, but do not return before hooks run
+  const showOnRoot = typeof pathname === "string" ? pathname === "/" : true;
 
   useEffect(() => {
+    if (!showOnRoot) return; // do nothing when not on root
     const el = ref.current;
     if (!el) return;
     const update = () => {
@@ -25,11 +26,11 @@ export default function BouncingLogo({ src = "/dvd.png", size = 80, speed = 0.1 
       x += vel.current.x;
       y += vel.current.y;
       // bounce on edges
-  // bounce on edges — invert direction but keep same speed (no boost)
-  if (x <= 0) { x = 0; vel.current.x = Math.abs(vel.current.x); }
-  if (y <= 0) { y = 0; vel.current.y = Math.abs(vel.current.y); }
-  if (x >= w - size) { x = w - size; vel.current.x = -Math.abs(vel.current.x); }
-  if (y >= h - size) { y = h - size; vel.current.y = -Math.abs(vel.current.y); }
+      // bounce on edges — invert direction but keep same speed (no boost)
+      if (x <= 0) { x = 0; vel.current.x = Math.abs(vel.current.x); }
+      if (y <= 0) { y = 0; vel.current.y = Math.abs(vel.current.y); }
+      if (x >= w - size) { x = w - size; vel.current.x = -Math.abs(vel.current.x); }
+      if (y >= h - size) { y = h - size; vel.current.y = -Math.abs(vel.current.y); }
       el.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y)}px, 0)`;
       pos.current.x = x / (w - size);
       pos.current.y = y / (h - size);
@@ -46,7 +47,9 @@ export default function BouncingLogo({ src = "/dvd.png", size = 80, speed = 0.1 
       if (raf.current) cancelAnimationFrame(raf.current);
       window.removeEventListener("resize", onResize);
     };
-  }, [size]);
+  }, [size, showOnRoot]);
+
+  if (!showOnRoot) return null;
 
   return (
     <Link href="/about" className={styles.wrapper} aria-label="About">
