@@ -23,3 +23,4 @@ cp -R out/. docs/
 
 touch docs/.nojekyll
 ```
+Go into github settings -> pages -> ensure DNS is on for custom domain.
