@@ -20,6 +20,20 @@ export default function Home() {
       };
     }
   }, []);
+  // restore scroll position when returning from a subpage
+  useEffect(() => {
+    try {
+      const y = parseInt(sessionStorage.getItem('lucas_scroll_y') || '0', 10);
+      if (y && typeof window !== 'undefined') {
+        // small timeout to allow page layout to settle
+        setTimeout(() => window.scrollTo(0, y), 50);
+        // clear after restoring
+        sessionStorage.removeItem('lucas_scroll_y');
+      }
+    } catch (e) {
+      // ignore
+    }
+  }, []);
   return (
   <div className={styles.page}>
   <BouncingLogo src="/dvd.png" size={88} speed={1.5} />

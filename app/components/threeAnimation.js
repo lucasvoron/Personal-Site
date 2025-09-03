@@ -54,6 +54,17 @@ export function initThreeAnimation(container) {
   controls = new OrbitControls(camera, container);
   controls.minDistance = 1000;
   controls.maxDistance = 3000;
+  // On touch devices, disable dragging/rotate/pan to avoid interfering with page scroll
+  const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  if (isTouch) {
+    controls.enablePan = false;
+    controls.enableRotate = false;
+    controls.enableZoom = false;
+    // also reduce event listeners footprint
+    controls.dispose();
+    controls = null;
+    camera.position.z = 1000;
+  }
     scene = new THREE.Scene();
     group = new THREE.Group();
     scene.add(group);

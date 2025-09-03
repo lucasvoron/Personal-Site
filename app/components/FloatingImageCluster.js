@@ -48,6 +48,14 @@ export default function FloatingImageCluster({ images, title, position, date }) 
                   className={styles.imageLink}
                   onMouseEnter={() => setHovering(true)}
                   onMouseLeave={() => setHovering(false)}
+                  onClick={() => {
+                    try {
+                      // save current vertical scroll position so we can restore on close
+                      sessionStorage.setItem('lucas_scroll_y', String(window.scrollY || window.pageYOffset || 0));
+                    } catch (e) {
+                      // ignore storage errors
+                    }
+                  }}
                 >
                   <div className={styles.shadowOverlay}></div>
                   <Image
