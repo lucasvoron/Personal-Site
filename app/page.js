@@ -13,6 +13,50 @@ export default function Home() {
     const container = document.getElementById("container");
     if (container) {
       const cleanup = initThreeAnimation(container);
+      // Update head meta tags for title/description/OG/Twitter and favicon (client-side)
+      try {
+        const title = 'Lucas Voron';
+        const description = 'UI/UX Engineer & Technical Product Manager building thoughtful product experiences at the intersection of design and engineering.';
+        document.title = title;
+
+        const ensureMeta = (selector, createAttrs = {}) => {
+          let el = document.querySelector(selector);
+          if (!el) {
+            el = document.createElement('meta');
+            Object.entries(createAttrs).forEach(([k, v]) => el.setAttribute(k, v));
+            document.head.appendChild(el);
+          }
+          return el;
+        };
+
+        // description
+        const desc = ensureMeta('meta[name="description"]', { name: 'description' });
+        desc.content = description;
+
+        // Open Graph
+        const ogTitle = ensureMeta('meta[property="og:title"]', { property: 'og:title' });
+        ogTitle.content = title;
+        const ogDesc = ensureMeta('meta[property="og:description"]', { property: 'og:description' });
+        ogDesc.content = description;
+        const ogUrl = ensureMeta('meta[property="og:url"]', { property: 'og:url' });
+        ogUrl.content = 'https://lucasvoron.com/';
+        const ogImage = ensureMeta('meta[property="og:image"]', { property: 'og:image' });
+        ogImage.content = 'https://lucasvoron.com/favicon.ico';
+
+        // favicon
+        let icon = document.querySelector("link[rel~='icon']");
+        if (!icon) {
+          icon = document.createElement('link');
+          icon.rel = 'icon';
+          document.head.appendChild(icon);
+        }
+        icon.href = '/favicon.ico';
+
+      } catch (e) {
+        // non-fatal, continue
+        // console.warn('meta update failed', e);
+      }
+
       return () => {
         if (typeof cleanup === "function") cleanup();
       };
