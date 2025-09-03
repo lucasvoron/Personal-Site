@@ -19,8 +19,7 @@ rm -rf docs
 mkdir -p docs
 
 # copy build artifacts (.next and public) into docs
-cp -R .next docs/.next
-cp -R public/* docs/ || true
+cp -R out/. docs/
 
 touch docs/.nojekyll
 ```
