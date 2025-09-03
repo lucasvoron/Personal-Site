@@ -41,7 +41,7 @@ export default function Home() {
       <main className={styles.mainSplit}>
         <section className={styles.leftPane}>
           <h1 className={styles.heroName}>LUCAS VORON</h1>
-          <p className={styles.description}>Technical Product Manager II</p>
+          <p className={styles.description}>Software Development Engineer II</p>
           <p className={styles.education}>Santa Clara University</p>      
           <p className={styles.education}>Bachelor in Computer Science & Engineering</p>
           <p className={styles.education}>Minor in Mathematics</p>

@@ -301,7 +301,7 @@ a.secondary {
 /* Reduce vertical spacing for floating image sections and three.js on small screens */
 @media (max-width: 900px) {
   .floatingImageSection {
-    margin: 60px 0 60px 0;
+    margin: 80px 0 80px 0;
     height: auto;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -317,7 +317,7 @@ a.secondary {
 
 @media (max-width: 600px) {
   .floatingImageSection {
-    margin: 40px 0 40px 0;
+    margin: 60px 0 60px 0;
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -331,7 +331,7 @@ a.secondary {
 }
 
 @media (max-width: 450px) {
-  .floatingImageSection { margin: 28px 0 28px 0; }
+  .floatingImageSection { margin: 40px 0 40px 0; }
   .threeContainer { height: 24vh; min-height: 120px; }
 }
 
