@@ -1,10 +1,11 @@
 "use client";
 import styles from "./page.module.css";
+import Link from "next/link";
+import Image from "next/image";
 
 import { useEffect } from "react";
 import { initThreeAnimation } from "./components/threeAnimation";
 import FloatingImageCluster from "./components/FloatingImageCluster";
-import BouncingLogo from "./components/BouncingLogo";
 import SiteFooter from "./components/SiteFooter";
 import ScrollIndicator from "./components/ScrollIndicator";
 
@@ -36,7 +37,9 @@ export default function Home() {
   }, []);
   return (
   <div className={styles.page}>
-  <BouncingLogo src="/dvd.png" size={88} speed={1.5} />
+  <Link href="/about" className={styles.aboutLink} aria-label="About">
+    <Image src="/dvd.png" alt="Profile" fill className={styles.aboutIcon} />
+  </Link>
   <ScrollIndicator idleTime={1200} />
       <main className={styles.mainSplit}>
         <section className={styles.leftPane}>
@@ -57,7 +60,7 @@ export default function Home() {
           <FloatingImageCluster
             images={["/hpe1.png","/hpe2.png","/hpe3.png","/hpe4.png","/hpe5.png","/hpe6.png","/hpe7.png"]}
             title="HPE"
-            position="Technical Product Manager II"
+            position="Intermediate Technical Marketing Engineer"
             date="Summer 2022 - Present"
           />
         </div>

@@ -11,7 +11,7 @@ export default function HpePage() {
         <SkillMarquee skills={["Python","Next.js","React","HTML5","CSS","JavaScript","Postman","Charts.js","Data Visualization","Grafana","InfluxDB","Flux","SQL","API","Github Copilot","AI Integration","Figma","Docker","Wordpress","CI/CD"]} />
 
         <div className={styles.jobSection}>
-          <h2 className={styles.jobTitle}>Technical Product Manager II</h2>
+          <h2 className={styles.jobTitle}>Intermediate Technical Marketing Engineer</h2>
           <p className={styles.date}>
               March 2025 - Present
           </p>
@@ -34,7 +34,7 @@ export default function HpePage() {
         </div>
 
         <div className={styles.jobSection}>
-          <h2 className={styles.jobTitle}>Technical Product Manager I</h2>
+          <h2 className={styles.jobTitle}>Technical Marketing Engineer</h2>
           <p className={styles.date}>
               Sept 2023 - March 2025 (1 year 7 months)
           </p>
