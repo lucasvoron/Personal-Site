@@ -77,7 +77,7 @@ export function initThreeAnimation(container) {
     positions = new Float32Array(segments * 3);
     colors = new Float32Array(segments * 3);
     const pMaterial = new THREE.PointsMaterial({
-      color: 0x00ffff,
+      color: 0x7048ff,
       size: 3,
       blending: THREE.AdditiveBlending,
       transparent: true,
