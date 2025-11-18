@@ -70,12 +70,7 @@ export default function HpePage() {
               Summer 2022 (3 months)
           </p>
           <p className={styles.paragraph}>
-            Summary:
-            <br />
-            Designed and developed an end-to-end network automation framework website for HPE Aruba Networking’s Central product, acting as the sole contributor for the full stack deliverable and working directly with the data pipeline engineer.
-            <br />
-            <br />
-            Led UI/UX design in Figma: created wireframes, interactive prototypes, and design refinements based on feedback from the UX team and stakeholders.
+            Designed and developed an end-to-end network automation framework website for HPE Aruba Networking’s Central product, acting as the sole contributor for the full stack deliverable and working directly with the data pipeline engineer. Led UI/UX design in Figma: created wireframes, interactive prototypes, and design refinements based on feedback from the UX team and stakeholders.
             Implemented the front end using Next.js (React), translating designs into responsive, accessible interfaces and reusable components.
             Built full-stack functionality with an AWS-backed API and services, integrating data pipelines to surface live telemetry and status information.
             Developed visualizations to display network health, automation run status, and metrics.
