@@ -28,7 +28,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #7048ff; /* site accent */
+  background: #ffb7e7; /* site accent */
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
   transition: transform 160ms linear;
   pointer-events: none;

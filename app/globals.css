@@ -1,7 +1,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --accent: #7048ff; /* site accent used for buttons/icons */
+  --accent: #ffb7e7; /* site accent used for buttons/icons */
 }
 
 @media (prefers-color-scheme: dark) {
