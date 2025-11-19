@@ -8,6 +8,7 @@ import { initThreeAnimation } from "./components/threeAnimation";
 import FloatingImageCluster from "./components/FloatingImageCluster";
 import SiteFooter from "./components/SiteFooter";
 import ScrollIndicator from "./components/ScrollIndicator";
+import CherryBlossoms from "./components/CherryBlossoms";
 
 export default function Home() {
   useEffect(() => {
@@ -37,6 +38,7 @@ export default function Home() {
   }, []);
   return (
   <div className={styles.page}>
+  <CherryBlossoms />
   <Link href="/about" className={styles.aboutLink} aria-label="About">
     <Image src="/dvd.png" alt="Profile" fill className={styles.aboutIcon} />
   </Link>
