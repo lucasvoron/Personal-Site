@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function HpePage() {
   return (
-    <div className={pageStyles.page + " " + styles.hpeContainer}>
+    <div className={pageStyles.subPage + " " + styles.hpeContainer}>
       <main className={styles.mainColumn}>
         <div className={styles.companyName}>HPE</div>
         <SkillMarquee skills={["Python","Next.js","React","HTML5","CSS","JavaScript","Postman","Charts.js","Data Visualization","Grafana","InfluxDB","Flux","SQL","API","Github Copilot","AI Integration","Figma","Docker","Wordpress","CI/CD"]} />

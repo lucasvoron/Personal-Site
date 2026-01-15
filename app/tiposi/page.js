@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function TiposiPage() {
   return (
-    <div className={pageStyles.page + " " + styles.tiposiContainer}>
+    <div className={pageStyles.subPage + " " + styles.tiposiContainer}>
       <main className={styles.mainColumn}>
         <div className={styles.companyName}>TIPOSI</div>
         <SkillMarquee skills={["Industrial Design","Materials","Prototyping","User Research","Manufacturing"]} />

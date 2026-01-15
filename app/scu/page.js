@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function ScuPage() {
   return (
-    <div className={pageStyles.page + " " + styles.scuContainer}>
+    <div className={pageStyles.subPage + " " + styles.hpeContainer}>
       <main className={styles.mainColumn}>
         <div className={styles.companyName}>SCU</div>
         <SkillMarquee skills={["Career Advising", "Resume Review", "Interview Coaching", "Mentorship", "Leadership", "Team Collaboration", "Conflict Resolution", "Mediation", "Crisis Management", "Problem Solving", "Event Coordination", "Workshop Facilitation", "Community Building", "Student Outreach", "Communication", "Cultural Awareness", "Time Management", "Adaptability"]} />

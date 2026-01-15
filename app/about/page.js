@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className={pageStyles.page + " " + styles.aboutContainer}>
+    <div className={pageStyles.subPage + " " + styles.aboutContainer}>
       <main className={styles.aboutMain}>
         <h1 className={styles.heroSmall}>ABOUT</h1>
 

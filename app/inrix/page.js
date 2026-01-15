@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function InrixPage() {
   return (
-    <div className={pageStyles.page + " " + styles.inrixContainer}>
+    <div className={pageStyles.subPage + " " + styles.inrixContainer}>
       <main className={styles.mainColumn}>
         <div className={styles.companyName}>INRIX</div>
         <SkillMarquee skills={["Figma","Vue.js","HTML5","CSS","JavaScript","TypeScript","Docker","GraphQL"]} />

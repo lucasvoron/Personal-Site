@@ -14,7 +14,7 @@ export default function CherryBlossoms() {
     let mouseY = 0;
 
     // Create petals
-    const petalCount = 12; // Subtle count
+    const petalCount = 15; // Subtle count
     const flowers = [];
 
     for (let i = 0; i < petalCount; i++) {

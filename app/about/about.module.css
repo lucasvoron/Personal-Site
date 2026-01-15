@@ -1,5 +1,6 @@
 .aboutContainer {
   padding: 30px 24px 40px 24px;
+  background: transparent;
 }
 
 .aboutMain {
@@ -12,7 +13,7 @@
 
 .heroSmall {
   color: #fff;
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-weight: 100;
   margin: 0 0 12px 0;
 }
@@ -26,7 +27,7 @@
 }
 
 .description {
-  color: #ddd;
+  color: #ccc;
   font-size: 1.7rem;
   font-weight: 100;
   flex: 1;

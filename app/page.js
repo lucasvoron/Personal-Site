@@ -4,24 +4,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 import { useEffect } from "react";
-import { initThreeAnimation } from "./components/threeAnimation";
+// import { initThreeAnimation } from "./components/threeAnimation";
 import FloatingImageCluster from "./components/FloatingImageCluster";
 import SiteFooter from "./components/SiteFooter";
 import ScrollIndicator from "./components/ScrollIndicator";
 import CherryBlossoms from "./components/CherryBlossoms";
 
 export default function Home() {
-  useEffect(() => {
-    const container = document.getElementById("container");
-    if (container) {
-      const cleanup = initThreeAnimation(container);
+  // useEffect(() => {
+  //   const container = document.getElementById("container");
+  //   if (container) {
+  //     const cleanup = initThreeAnimation(container);
 
-      // keep only three.js initialization/cleanup here; metadata is handled server-side in app/layout.js
-      return () => {
-        if (typeof cleanup === "function") cleanup();
-      };
-    }
-  }, []);
+  //     // keep only three.js initialization/cleanup here; metadata is handled server-side in app/layout.js
+  //     return () => {
+  //       if (typeof cleanup === "function") cleanup();
+  //     };
+  //   }
+  // }, []);
   // restore scroll position when returning from a subpage
   useEffect(() => {
     try {
@@ -44,17 +44,18 @@ export default function Home() {
   </Link>
   <ScrollIndicator idleTime={1200} />
       <main className={styles.mainSplit}>
-        <section className={styles.leftPane}>
-          <h1 className={styles.heroName}>LUCAS VORON</h1>
-          <p className={styles.description}>Software Development Engineer II</p>
-          <p className={styles.education}>Santa Clara University</p>      
-          <p className={styles.education}>Bachelor in Computer Science & Engineering</p>
-          <p className={styles.education}>Minor in Mathematics</p>
-          <br />
-          <p className={styles.mantra}>Bringing concepts to life from design to deployment.</p>
-        </section>
-        <section className={styles.rightPane}>
-          <div id="container" className={styles.threeContainer}></div>
+        <section className={styles.heroSection}>
+          <Image src="/hero.png" alt="Hero" fill className={styles.heroImage} />
+          <div className={styles.heroContent}>
+            <h1 className={styles.heroName}>LUCAS VORON</h1>
+            <p className={styles.description}>SOFTWARE ENGINEER II</p>
+            <p className={styles.education}>Santa Clara University</p>      
+            <p className={styles.education}>Bachelor in Computer Science & Engineering</p>
+            <p className={styles.education}>Minor in Mathematics</p>
+            <br />
+            <p className={styles.mantra}>Bringing concepts to life from design to deployment.</p>
+          </div>
+          {/* <div id="container" className={styles.threeContainer}></div> */}
         </section>
       </main>
       <div>
