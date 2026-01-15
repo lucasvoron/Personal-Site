@@ -27,6 +27,8 @@ touch docs/.nojekyll
 # add CNAME for custom domain
 echo "lucasvoron.com" > docs/CNAME
 
+-> can just push on Github desktop at this point
+
 # commit and push to GitHub
 git add docs/
 git commit -m "Deploy: Update site"
