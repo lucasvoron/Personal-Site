@@ -38,7 +38,7 @@ export default function Home() {
   }, []);
   return (
   <div className={styles.page}>
-  <CherryBlossoms />
+  {/* <CherryBlossoms /> */}
   <Link href="/about" className={styles.aboutLink} aria-label="About">
     <Image src="/dvd.png" alt="Profile" fill className={styles.aboutIcon} />
   </Link>
@@ -47,6 +47,7 @@ export default function Home() {
         <section className={styles.heroSection}>
           <Image src="/hero.png" alt="Hero" fill className={styles.heroImage} />
           <div className={styles.heroContent}>
+            <Image src="/palette.png" alt="Palette" fill className={styles.palette} />
             <h1 className={styles.heroName}>LUCAS VORON</h1>
             <p className={styles.description}>SOFTWARE ENGINEER II</p>
             <p className={styles.education}>Santa Clara University</p>      

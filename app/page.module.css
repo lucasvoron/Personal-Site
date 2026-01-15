@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   height: 500vh;
-  background: radial-gradient(ellipse at center top, #d60000 0%, #000000 50%);
+  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
   z-index: -2;
   pointer-events: none;
 }
@@ -42,7 +42,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center top, #d60000 0%, #000000 50%);
+  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
   z-index: -2;
   pointer-events: none;
 }
@@ -76,6 +76,21 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.palette {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 24px 0 0 24px;
+  width: 150px;
+  max-width: 100px;
+  height: 10px;
+  max-height: 18px;
+  z-index: 2;
+  filter: none !important;
 }
 
 .heroContent {
@@ -88,12 +103,12 @@
 
 .heroName {
   display: flex;
-  color: #d60000;
-  font-size: 20vw;
-  font-weight: 3000;
-  letter-spacing: -0.05em;
+  color: #925d28;
+  font-size: 13vw;
+  font-weight: 700;
+  letter-spacing: 0em;
   line-height: 0.8em;
-  margin: 0 0 30px 0;
+  margin: 0 0 100px 0;
   text-align: left;
 }
 
@@ -104,7 +119,7 @@
   margin: 0 0 0 40vw;
   padding: 0 2vw 0 0;
   filter: none !important;
-  border-right: 4px solid #9a7623;
+  border-right: 4px solid #d60000;
 
 }
 
@@ -116,7 +131,7 @@
   font-size: 2vw;
   font-weight: 700;
   margin: 0;
-  transform: rotate(-90deg) translateX(-40%) translateY(-100%);
+  transform: rotate(-90deg) translateX(-50%) translateY(-120%);
   transform-origin: center center;
   white-space: nowrap;
 }
@@ -319,8 +334,8 @@ a.secondary {
     height: 100vh;
     align-items: flex-start;
     padding-top: 80px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .heroContent {
@@ -330,7 +345,7 @@ a.secondary {
   }
 
   .heroName { 
-    font-size: 9vw;
+    font-size: 13vw;
     margin-left: 10px;
   }
   
@@ -359,6 +374,11 @@ a.secondary {
 
 /* Reduce vertical spacing for floating image sections and three.js on small screens */
 @media (max-width: 900px) {
+  .heroSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .floatingImageSection {
     margin: 80px 0 80px 0;
     height: auto;
