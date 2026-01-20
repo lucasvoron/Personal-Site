@@ -1,6 +1,6 @@
 .wrapper {
   position: fixed;
-  left: calc(10px + 1em);
+  left: calc(5px + 1em);
   top: 0;
   height: 100vh;
   width: 10px;
@@ -28,7 +28,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #d9464670; /* site accent */
+  background: #801f1f; /* site accent */
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
   transition: transform 160ms linear;
   pointer-events: none;

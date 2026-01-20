@@ -20,7 +20,8 @@
   top: 100vh;
   left: 0;
   width: 100%;
-  height: 500vh;
+  height: calc(100% - 100vh);
+  min-height: 100vh;
   background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
   z-index: -2;
   pointer-events: none;
@@ -140,18 +141,18 @@
 
 .education {
   color: #000;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   font-weight: 100;
   margin: 0 0 0 10px;
+  width: 40%;
 }
 
 .mantra {
-  margin: 40px 0 0 0;
+  margin: 40px 0 0 10px;
   color: #d94646;
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   font-weight: 100;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9);
-  margin: 0 0 0 10px;
 }
 
 .threeContainer {
@@ -254,7 +255,6 @@ a.secondary {
   width: 100%;
   box-sizing: border-box;
   height: auto;
-  min-height: 60vh;
 }
 
 .floatingImageDivider {
@@ -350,52 +350,30 @@ a.secondary {
 
   .heroName { 
     font-size: 13vw;
-    margin-left: 10px;
+    margin: 100px 0 100px 10px;
   }
   
   .description { 
-    font-size: 4.5vw;
-    right: -70px;
+    font-size: 4vw;
+    right: -100px;
   }
   
   .education { 
-    font-size: 3.5vw;
+    font-size: 3vw;
     max-width: 30%;
     margin-left: 10px;
   }
   
   .mantra { 
-    font-size: 4vw;
+    font-size: 3.5vw;
     max-width: 30%;
-    margin-left: 10px;
+    margin-left: 50px 0 0 10px;
   }
   
   .mainSplit {
     height: auto;
     min-height: 100vh;
     margin: 0 0 100px 0;
-  }
-}
-
-/* Reduce vertical spacing for floating image sections and three.js on small screens */
-@media (max-width: 900px) {
-  .heroSection {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .floatingImageSection {
-    margin: 80px 0 80px 0;
-    height: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .threeContainer {
-    height: 34vh;
-    min-height: 180px;
-    max-height: 360px;
-    margin: 12px 0 20px 0;
   }
 }
 
@@ -416,17 +394,18 @@ a.secondary {
 
 @media (max-width: 450px) {
   .floatingImageSection { margin: 40px 0 40px 0; }
-  .threeContainer { height: 24vh; min-height: 120px; }
+  .threeContainer { height: 24vh; min-height: 80px; }
 }
 
 /* Portrait orientation - reduce scroll height */
 @media (max-width: 786px) and (orientation: portrait) {
   .page::after {
-    height: 180vh;
+    height: calc(100% - 100vh);
+    min-height: 180vh;
   }
   
   .floatingImageSection {
-    margin: 50px 0 50px 0;
+    margin: 100px 0;
     height: auto;
   }
   
@@ -441,7 +420,7 @@ a.secondary {
   top: 18px;
   width: 50px;
   height: 50px;
-  background: rgba(255,255,255,0.06);
+  background: rgba(255, 255, 255, 0);
   border-radius: 999px;
   display: flex;
   align-items: center;
@@ -473,7 +452,7 @@ a.secondary {
   .aboutLink {
     width: 40px;
     height: 40px;
-    right: 15px;
+    right: 25px;
     top: 15px;
   }
 }
@@ -482,7 +461,7 @@ a.secondary {
   .aboutLink {
     width: 36px;
     height: 36px;
-    right: 12px;
+    right: 18px;
     top: 12px;
   }
 }
@@ -492,7 +471,7 @@ a.secondary {
     filter: invert();
   }
   .aboutLink {
-    background: rgba(0,0,0,0.45);
+    background: rgba(0, 0, 0, 0.7);
   }
   .aboutLink:hover {
     background: rgba(0,0,0,0.65);

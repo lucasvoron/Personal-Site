@@ -18,7 +18,7 @@ export default function AboutPage() {
             engineering practice to build dynamic, fun, and easy to use interfaces. I enjoy collaborating with diverse teams to make magic happen. I am proficient in Python scripting, but my true love lies in web design & development.
             <br />
             <br />
-            Bilingual in English and French, I enjoy hands‑on creative work — drawing, painting, and fashion — alongside outdoor
+            Bilingual in English and French, I enjoy hands‑on creative work: drawing, painting, and fashion, alongside outdoor
             activities like climbing and swimming.
             </p>
             <div className={styles.headshotWrapper}>
