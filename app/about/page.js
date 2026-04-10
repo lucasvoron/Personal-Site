@@ -1,13 +1,14 @@
 import pageStyles from "../page.module.css";
+import layout from "../subpageLayout.module.css";
 import styles from "./about.module.css";
 import SiteFooter from "../components/SiteFooter";
 import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className={pageStyles.subPage + " " + styles.aboutContainer}>
-      <main className={styles.aboutMain}>
-        <h1 className={styles.heroSmall}>ABOUT</h1>
+    <div className={`${pageStyles.subPage} ${layout.container}`}>
+      <main className={layout.main}>
+        <h1 className={layout.heading}>ABOUT</h1>
 
         <div className={styles.content}>
             <p className={styles.description}>

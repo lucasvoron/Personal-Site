@@ -1,12 +1,13 @@
 import pageStyles from "../page.module.css";
+import layout from "../subpageLayout.module.css";
 import styles from "./resume.module.css";
 import SiteFooter from "../components/SiteFooter";
 
 export default function ResumePage() {
   return (
-    <div className={pageStyles.subPage + " " + styles.resumeContainer}>
-      <main className={styles.resumeMain}>
-        <h1 className={styles.heading}>RESUME</h1>
+    <div className={`${pageStyles.subPage} ${layout.container}`}>
+      <main className={layout.main}>
+        <h1 className={layout.heading}>RESUME</h1>
         <div className={styles.pdfWrapper}>
           <iframe
             src="/resume.pdf"
