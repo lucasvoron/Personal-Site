@@ -64,6 +64,7 @@ export default function FloatingImageCluster({ images, title, position, date }) 
                     className={styles.floatingImage}
                     width={500}
                     height={350}
+                    loading="lazy"
                   />
                 </Link>
               </div>

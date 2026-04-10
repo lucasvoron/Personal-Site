@@ -23,7 +23,7 @@ export default function AboutPage() {
             </p>
             <div className={styles.headshotWrapper}>
               <Image 
-                src="/headshot.jpg" 
+                src="/headshot.webp" 
                 alt="Lucas Voron" 
                 width={400}
                 height={400}

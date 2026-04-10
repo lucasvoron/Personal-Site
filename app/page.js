@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import FloatingImageCluster from "./components/FloatingImageCluster";
 import SiteFooter from "./components/SiteFooter";
 import ScrollIndicator from "./components/ScrollIndicator";
-import CherryBlossoms from "./components/CherryBlossoms";
+import LinkedInCarousel from "./components/LinkedInCarousel";
 
 export default function Home() {
   // useEffect(() => {
@@ -38,16 +38,23 @@ export default function Home() {
   }, []);
   return (
   <div className={styles.page}>
-  {/* <CherryBlossoms /> */}
-  <Link href="/about" className={styles.aboutLink} aria-label="About">
-    <Image src="/dvd.png" alt="Profile" fill className={styles.aboutIcon} />
-  </Link>
+  <nav className={styles.topNav}>
+    <a href="https://www.linkedin.com/in/lucasvoron/" target="_blank" rel="noopener noreferrer" className={styles.navButton} aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor" className={styles.navIcon}><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <Link href="/resume" className={styles.navButton} aria-label="Resume" title="Resume">
+      <svg viewBox="0 0 24 24" fill="currentColor" className={`${styles.navIcon} ${styles.resumeIcon}`}><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h8v2H8v-2zm0-3h8v2H8v-2z"/></svg>
+    </Link>
+    <Link href="/about" className={styles.aboutLink} aria-label="About" title="About">
+      <Image src="/dvd.webp" alt="Profile" fill sizes="42px" priority className={styles.aboutIcon} />
+    </Link>
+  </nav>
   <ScrollIndicator idleTime={1200} />
       <main className={styles.mainSplit}>
         <section className={styles.heroSection}>
-          <Image src="/hero.png" alt="Hero" fill className={styles.heroImage} />
+          <Image src="/hero.webp" alt="Hero" fill sizes="100vw" priority className={styles.heroImage} />
           <div className={styles.heroContent}>
-            <Image src="/palette.png" alt="Palette" fill className={styles.palette} />
+            <Image src="/palette.webp" alt="Palette" fill sizes="100vw" priority className={styles.palette} />
             <h1 className={styles.heroName}>LUCAS VORON</h1>
             <p className={styles.description}>SOFTWARE ENGINEER II</p>
             <p className={styles.education}>Santa Clara University</p>      
@@ -59,10 +66,13 @@ export default function Home() {
           {/* <div id="container" className={styles.threeContainer}></div> */}
         </section>
       </main>
+  <h2 className={styles.sectionHeading}>Projects</h2>
+  <LinkedInCarousel />
       <div>
+        <h2 className={styles.sectionHeading}>Experience</h2>
         <div className={styles.floatingImageSection}>
           <FloatingImageCluster
-            images={["/hpe1.png","/hpe2.png","/hpe3.png","/hpe4.png","/hpe5.png","/hpe6.png","/hpe7.png"]}
+            images={["/hpe1.webp","/hpe2.webp","/hpe3.webp","/hpe4.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
             title="HPE"
             position="Intermediate Technical Marketing Engineer"
             date="Summer 2022 - Present"
@@ -71,7 +81,7 @@ export default function Home() {
         <div className={styles.floatingImageDivider}></div>
         <div className={styles.floatingImageSection}>
           <FloatingImageCluster
-            images={["/inrix1.jpg","/inrix2.png","/inrix3.png","/inrix4.jpg","/inrix5.png","/inrix6.jpg","/inrix7.png"]}
+            images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp"]}
             title="INRIX"
             position="Software Development Engineer Intern"
             date="Summer 2021"
@@ -80,7 +90,7 @@ export default function Home() {
         <div className={styles.floatingImageDivider}></div>
         <div className={styles.floatingImageSection}>
           <FloatingImageCluster
-            images={["/scu1.jpg","/scu2.png","/scu3.png","/scu4.jpg","/scu5.jpg","/scu6.jpg","/scu7.jpeg"]}
+            images={["/scu1.webp","/scu2.webp","/scu3.webp","/scu4.webp","/scu5.webp","/scu6.webp","/scu7.webp"]}
             title="SCU"
             position="Peer Career Advisor & Resident Assistant"
             date="Fall 2019 - Spring 2023"
@@ -89,7 +99,7 @@ export default function Home() {
         <div className={styles.floatingImageDivider}></div>
         <div className={styles.floatingImageSection}>
           <FloatingImageCluster
-            images={["/tiposi1.png","/tiposi2.png","/tiposi3.png","/tiposi4.png","/tiposi5.png","/tiposi6.png","/tiposi7.png"]}
+            images={["/tiposi1.webp","/tiposi2.webp","/tiposi3.webp","/tiposi4.webp","/tiposi5.webp","/tiposi6.webp","/tiposi7.webp"]}
             title="TIPOSI"
             position="Medical Device Design Consultant"
             date="Summer 2020"

@@ -66,7 +66,7 @@
   height: auto;
   min-height: 100vh;
   width: 100vw;
-  margin: 0 0 200px 0;
+  margin: 0 0 60px 0;
   background: #fff;
 }
 
@@ -247,6 +247,20 @@ a.secondary {
   flex-shrink: 0;
 }
 
+/* Section Headings */
+.sectionHeading {
+  color: #fff;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100%;
+  max-width: 1600px;
+  margin: 40px auto 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
 /* Image Container */
 .floatingImageSection {
   display: flex;
@@ -263,7 +277,7 @@ a.secondary {
 }
 
 /* Make homepage images black & white by default, restore color on hover */
-.page img,
+.page img:not([data-no-filter]),
 .page .floatingImage {
   filter: grayscale(100%) contrast(1) brightness(0.95);
   transition: filter 280ms ease, transform 200ms ease;
@@ -373,7 +387,7 @@ a.secondary {
   .mainSplit {
     height: auto;
     min-height: 100vh;
-    margin: 0 0 100px 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -414,18 +428,25 @@ a.secondary {
   }
 }
 
-.aboutLink {
+.topNav {
   position: absolute;
   right: 30px;
   top: 18px;
-  width: 50px;
-  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 100;
+}
+
+.aboutLink {
+  position: relative;
+  width: 42px;
+  height: 42px;
   background: rgba(255, 255, 255, 0);
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
   transition: background 0.2s ease, transform 0.2s ease;
   overflow: hidden;
 }
@@ -441,28 +462,90 @@ a.secondary {
   height: 100% !important;
 }
 
+.navButton {
+  width: 42px;
+  height: 42px;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: background 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.navButton:hover {
+  background: rgba(255,255,255,0.12);
+  transform: scale(1.05);
+}
+
+.navIcon {
+  width: 22px;
+  height: 22px;
+}
+
+.resumeIcon {
+  width: 26px;
+  height: 26px;
+}
+
 @media (max-width: 1200px) {
+  .topNav {
+    right: 30px;
+    top: 18px;
+  }
   .aboutLink {
-    width: 45px;
-    height: 45px;
+    width: 38px;
+    height: 38px;
+  }
+  .navButton {
+    width: 38px;
+    height: 38px;
+  }
+  .navIcon {
+    width: 20px;
+    height: 20px;
   }
 }
 
 @media (max-width: 786px) {
-  .aboutLink {
-    width: 40px;
-    height: 40px;
+  .topNav {
     right: 25px;
     top: 15px;
+    gap: 8px;
+  }
+  .aboutLink {
+    width: 34px;
+    height: 34px;
+  }
+  .navButton {
+    width: 34px;
+    height: 34px;
+  }
+  .navIcon {
+    width: 18px;
+    height: 18px;
   }
 }
 
 @media (max-width: 480px) {
-  .aboutLink {
-    width: 36px;
-    height: 36px;
+  .topNav {
     right: 18px;
     top: 12px;
+    gap: 6px;
+  }
+  .aboutLink {
+    width: 30px;
+    height: 30px;
+  }
+  .navButton {
+    width: 30px;
+    height: 30px;
+  }
+  .navIcon {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -474,6 +557,12 @@ a.secondary {
     background: rgba(0, 0, 0, 0.7);
   }
   .aboutLink:hover {
+    background: rgba(0,0,0,0.65);
+  }
+  .navButton {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .navButton:hover {
     background: rgba(0,0,0,0.65);
   }
 }

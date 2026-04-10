@@ -13,9 +13,11 @@
 
 .heroSmall {
   color: #fff;
-  font-size: 5rem;
-  font-weight: 100;
-  margin: 0 0 12px 0;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 40px 0 12px 0;
 }
 
 .content {
