@@ -1,0 +1,359 @@
+/* ── Full-page background (matches subPage dark gradient) ─────────────── */
+.wrapper,
+.gateWrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  font-family: var(--font-geist-sans);
+}
+
+/* ── Password gate ─────────────────────────────────────────────────────── */
+.gateWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gateForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 48px 40px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-width: 320px;
+  max-width: 400px;
+  width: 90vw;
+}
+
+.gateLabel {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.gateSubLabel {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.gateInput {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.gateInput:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.gateInputError {
+  border-color: #e05555 !important;
+}
+
+.gateError {
+  color: #e05555;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.gateSubmit {
+  width: 100%;
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.gateSubmit:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.gateSubmit:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gateBack {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.gateBack:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Portfolio page ────────────────────────────────────────────────────── */
+.header {
+  padding: 60px 60px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heading {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.subheading {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1rem;
+  margin: 0 0 60px;
+}
+
+/* ── Company logo grid ─────────────────────────────────────────────────── */
+/* ── Company logo grid ─────────────────────────────────────────────────── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 0 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Each company block: card + optional inline panel stacked vertically */
+.companyBlock {
+  display: contents;
+}
+
+.logoCard {
+  aspect-ratio: 3 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.logoCard:hover {
+  border-color: var(--accent, rgba(255, 255, 255, 0.5));
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-3px);
+}
+
+.logoCardActive {
+  border-color: var(--accent, rgba(255, 255, 255, 0.5));
+  background: rgba(255, 255, 255, 0.06);
+  transform: none;
+}
+
+/* Logo image inside card */
+.logoImgWrapper {
+  position: relative;
+  width: 70%;
+  height: 60%;
+}
+
+.logoImg {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.logoCard:hover .logoImg,
+.logoCardActive .logoImg {
+  opacity: 1;
+}
+
+.logoName {
+  color: var(--accent, #fff);
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Inline expanded panel ─────────────────────────────────────────────── */
+.panel {
+  grid-column: 1 / -1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  margin-top: 10px;
+  animation: panelIn 0.22s ease;
+  overflow: hidden;
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panelInner {
+  padding: 40px 48px 12px;
+}
+
+/* ── Project sections inside panel ────────────────────────────────────── */
+.projectSection {
+  margin-bottom: 0;
+}
+
+.projectTitle {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin: 0 0 10px;
+  letter-spacing: 0.04em;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.92rem;
+  max-width: 800px;
+  line-height: 1.7;
+  margin: 0 0 24px;
+}
+
+/* ── Wireframe horizontal strip ────────────────────────────────────────── */
+.wireframeStrip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.wireframeThumb {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.wireframeThumb:hover {
+  border-color: var(--accent, #00a96e);
+  transform: translateY(-3px);
+}
+
+.thumbImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.thumbImage {
+  border-radius: 5px 5px 0 0;
+}
+
+.thumbIndex {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  padding: 6px 0 8px;
+}
+
+/* ── Empty / placeholder states ─────────────────────────────────────────── */
+.emptyState {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  padding: 24px 0;
+}
+
+.emptyState code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.noWireframes {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0 0 20px;
+}
+
+.projectDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 36px 0;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header,
+  .grid {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .panelInner {
+    padding: 28px 20px 8px;
+  }
+
+  .wireframeStrip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .wireframeStrip {
+    grid-template-columns: 1fr;
+  }
+}

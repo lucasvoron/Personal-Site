@@ -1,14 +1,5 @@
 const linkedinProjects = [
   {
-    title: "HPE DEV Meetup",
-    description:
-      "Meetup session showcasing the Automation capabilities of HPE Networking Central — the latest Central APIs, the Central Postman Collection, and the new PyCentralv2 Python SDK, giving a simple path to making consistent configuration changes at scale.",
-    image: "/project-hpe-meetup.webp",
-    link: "https://www.youtube.com/watch?v=5QFTzwk9VrU",
-    association: "Hewlett Packard Enterprise",
-    skills: ["Technical Presentations", "Presentation Skills", "Live Demo", "Developer Enablement", "Developer Relations"],
-  },
-  {
     title: "HPE Networking Developer Hub",
     description:
       "Designed and built the developer hub to bring automation resources to customers, partners, and define the future of software defined networking.",
@@ -34,6 +25,15 @@ const linkedinProjects = [
     link: "https://github.com/aruba/central-large-public-venue-monitoring-dashboard",
     association: "Hewlett Packard Enterprise",
     skills: ["Open Source", "Software Defined Networking", "Network Automation", "Developer Experience"],
+  },
+  {
+    title: "Feature Navigator",
+    description:
+      "Feature Navigator is a tool for exploring and managing features in HPE Aruba Networking Wireless and Wired products.",
+    image: "/project-feature-navigator.webp",
+    link: "https://feature-navigator.arubanetworking.hpe.com/",
+    association: "Hewlett Packard Enterprise",
+    skills: ["Search", "Sales Tooling", "Network Hardware", "Product Catalog"],
   }
 ];
 

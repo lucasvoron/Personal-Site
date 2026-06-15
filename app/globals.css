@@ -56,6 +56,13 @@ a {
   border: none;
   font-weight: 700;
   font-size: 20px;
+  transition: opacity 0.18s ease;
+}
+
+/* Hide the global close/home button while modal lightbox is active. */
+body.lightbox-open .site-close {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (prefers-color-scheme: dark) {

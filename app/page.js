@@ -7,7 +7,6 @@ import { useEffect } from "react";
 // import { initThreeAnimation } from "./components/threeAnimation";
 import FloatingImageCluster from "./components/FloatingImageCluster";
 import SiteFooter from "./components/SiteFooter";
-import ScrollIndicator from "./components/ScrollIndicator";
 import LinkedInCarousel from "./components/LinkedInCarousel";
 
 export default function Home() {
@@ -49,14 +48,13 @@ export default function Home() {
       <Image src="/dvd.webp" alt="Profile" fill sizes="42px" priority className={styles.aboutIcon} />
     </Link>
   </nav>
-  <ScrollIndicator idleTime={1200} />
       <main className={styles.mainSplit}>
         <section className={styles.heroSection}>
           <Image src="/hero.webp" alt="Hero" fill sizes="100vw" priority className={styles.heroImage} />
           <div className={styles.heroContent}>
             <Image src="/palette.webp" alt="Palette" fill sizes="100vw" priority className={styles.palette} />
             <h1 className={styles.heroName}>LUCAS VORON</h1>
-            <p className={styles.description}>SOFTWARE ENGINEER II</p>
+            {/* <p className={styles.description}>SOFTWARE ENGINEER II</p> */}
             <p className={styles.education}>Santa Clara University</p>      
             <p className={styles.education}>Bachelor in Computer Science & Engineering</p>
             <p className={styles.education}>Minor in Mathematics</p>
@@ -66,45 +64,63 @@ export default function Home() {
           {/* <div id="container" className={styles.threeContainer}></div> */}
         </section>
       </main>
+  <div className={styles.designPortfolioSection}>
+    <h2 className={styles.sectionHeading}>Portfolio</h2>
+    <div className={styles.designPortfolioCTA}>
+      <Link href="/design" className={styles.designPortfolioButton}>
+        <div className={styles.designPortfolioBtnLeft}>
+          <span className={styles.designPortfolioBtnEyebrow}>Password Protected</span>
+          <span className={styles.designPortfolioBtnLabel}>Design Portfolio</span>
+          <span className={styles.designPortfolioBtnSub}>UI/UX wireframes &amp; product design work</span>
+        </div>
+        <span className={styles.designPortfolioBtnArrow}>→</span>
+      </Link>
+    </div>
+  </div>
   <h2 className={styles.sectionHeading}>Projects</h2>
   <LinkedInCarousel />
       <div>
         <h2 className={styles.sectionHeading}>Experience</h2>
-        <div className={styles.floatingImageSection}>
-          <FloatingImageCluster
-            images={["/hpe1.webp","/hpe2.webp","/hpe3.webp","/hpe4.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
-            title="HPE"
-            position="Intermediate Technical Marketing Engineer"
-            date="Summer 2022 - Present"
-          />
-        </div>
-        <div className={styles.floatingImageDivider}></div>
-        <div className={styles.floatingImageSection}>
-          <FloatingImageCluster
-            images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp"]}
-            title="INRIX"
-            position="Software Development Engineer Intern"
-            date="Summer 2021"
-          />
-        </div>
-        <div className={styles.floatingImageDivider}></div>
-        <div className={styles.floatingImageSection}>
-          <FloatingImageCluster
-            images={["/scu1.webp","/scu2.webp","/scu3.webp","/scu4.webp","/scu5.webp","/scu6.webp","/scu7.webp"]}
-            title="SCU"
-            position="Peer Career Advisor & Resident Assistant"
-            date="Fall 2019 - Spring 2023"
-          />
-        </div>
-        <div className={styles.floatingImageDivider}></div>
-        <div className={styles.floatingImageSection}>
-          <FloatingImageCluster
-            images={["/tiposi1.webp","/tiposi2.webp","/tiposi3.webp","/tiposi4.webp","/tiposi5.webp","/tiposi6.webp","/tiposi7.webp"]}
-            title="TIPOSI"
-            position="Medical Device Design Consultant"
-            date="Summer 2020"
-          />
-        </div>
+        <Link href="/hpe" className={styles.experienceLink}>
+          <div className={styles.floatingImageSection}>
+            <FloatingImageCluster
+              images={["/hpe1.webp","/hpe2.webp","/hpe3.webp","/hpe4.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
+              title="HPE"
+              position="Intermediate Technical Marketing Engineer"
+              date="Summer 2022 - Present"
+            />
+          </div>
+        </Link>
+        <Link href="/inrix" className={styles.experienceLink}>
+          <div className={styles.floatingImageSection}>
+            <FloatingImageCluster
+              images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp"]}
+              title="INRIX"
+              position="Software Development Engineer Intern"
+              date="Summer 2021"
+            />
+          </div>
+        </Link>
+        <Link href="/scu" className={styles.experienceLink}>
+          <div className={styles.floatingImageSection}>
+            <FloatingImageCluster
+              images={["/scu1.webp","/scu2.webp","/scu3.webp","/scu4.webp","/scu5.webp","/scu6.webp","/scu7.webp"]}
+              title="SCU"
+              position="Peer Career Advisor & Resident Assistant"
+              date="Fall 2019 - Spring 2023"
+            />
+          </div>
+        </Link>
+        <Link href="/tiposi" className={styles.experienceLink}>
+          <div className={styles.floatingImageSection}>
+            <FloatingImageCluster
+              images={["/tiposi1.webp","/tiposi2.webp","/tiposi3.webp","/tiposi4.webp","/tiposi5.webp","/tiposi6.webp","/tiposi7.webp"]}
+              title="TIPOSI"
+              position="Medical Device Design Consultant"
+              date="Summer 2020"
+            />
+          </div>
+        </Link>
       </div>
   <SiteFooter />
     </div>

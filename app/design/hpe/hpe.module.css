@@ -1,0 +1,190 @@
+/* Full-page dark background */
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  font-family: var(--font-geist-sans);
+  padding-bottom: 100px;
+}
+
+/* ── Page header ───────────────────────────────────────────────────────── */
+.pageHeader {
+  padding: 60px 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  margin-bottom: 60px;
+}
+
+.backLink {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 28px;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.backLink:hover { color: rgba(255, 255, 255, 0.8); }
+
+.companyHeading {
+  color: #00a96e;
+  font-size: 4rem;
+  font-weight: 100;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.companySubheading {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+  margin: 0;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Project list ──────────────────────────────────────────────────────── */
+.projectList {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.projectSection {
+  margin-bottom: 0;
+}
+
+.projectTitle {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 0 0 12px;
+  letter-spacing: 0.04em;
+}
+
+.projectDescription {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.95rem;
+  max-width: 800px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+/* ── Wireframe horizontal strip ────────────────────────────────────────── */
+.wireframeStrip {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+.wireframeStrip::-webkit-scrollbar {
+  height: 4px;
+}
+
+.wireframeStrip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.wireframeStrip::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+/* Individual thumbnail button */
+.wireframeThumb {
+  flex: 0 0 auto;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative;
+}
+
+.wireframeThumb:hover {
+  border-color: #00a96e;
+  transform: translateY(-3px);
+}
+
+.thumbImageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+}
+
+.thumbImage {
+  border-radius: 5px 5px 0 0;
+}
+
+.thumbIndex {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 6px 0 8px;
+}
+
+/* ── Empty / placeholder states ────────────────────────────────────────── */
+.emptyState {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding: 40px 0;
+}
+
+.emptyState code {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 0.88rem;
+}
+
+.noWireframes {
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0 0 24px;
+}
+
+/* ── Section divider ───────────────────────────────────────────────────── */
+.projectDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 48px 0;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .pageHeader,
+  .projectList {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .companyHeading {
+    font-size: 2.5rem;
+  }
+
+  .wireframeThumb {
+    width: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wireframeThumb {
+    width: 150px;
+  }
+}

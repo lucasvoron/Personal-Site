@@ -66,13 +66,13 @@
   height: auto;
   min-height: 100vh;
   width: 100vw;
-  margin: 0 0 60px 0;
+  margin: 0 60px 0px 40px;
   background: #fff;
 }
 
 .heroSection {
   position: relative;
-  width: 100%;
+  width: 70%;
   height: auto;
   min-height: 100vh;
   display: flex;
@@ -107,7 +107,7 @@
 .heroName {
   display: flex;
   color: #925d28;
-  font-size: 13vw;
+  font-size: 11vw;
   font-weight: 700;
   letter-spacing: 0em;
   line-height: 0.8em;
@@ -118,12 +118,11 @@
 .heroImage {
   object-fit: cover;
   object-position: center;
-  width: 40vw !important;
-  margin: 0 0 0 40vw;
+  width: 25vw !important;
+  margin: 0 0 0 60vw;
   padding: 0 2vw 0 0;
   filter: none !important;
   border-right: 4px solid #d60000;
-
 }
 
 .description {
@@ -141,16 +140,16 @@
 
 .education {
   color: #000;
-  font-size: 1.5vw;
-  font-weight: 100;
+  font-size: 1.25vw;
+  font-weight: 200;
   margin: 0 0 0 10px;
-  width: 40%;
+  width: 100%;
 }
 
 .mantra {
   margin: 40px 0 0 10px;
   color: #d94646;
-  font-size: 1.45vw;
+  font-size: 1.5vw;
   font-weight: 300;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9);
 }
@@ -255,24 +254,25 @@ a.secondary {
   text-transform: uppercase;
   font-weight: 600;
   width: 100%;
-  max-width: 1600px;
-  margin: 40px auto 0;
-  padding-left: 20px;
+  margin: 48px 0 0;
+  padding-left: 60px;
+  padding-right: 60px;
   text-align: left;
+  box-sizing: border-box;
 }
 
 /* Image Container */
 .floatingImageSection {
   display: flex;
-  justify-content: center;
-  margin: 100px 0 100px 0;
+  justify-content: flex-start;
+  margin: 40px 0 0 0;
   width: 100%;
   box-sizing: border-box;
   height: auto;
 }
 
 .floatingImageDivider {
-  height: 0px;
+  height: 0;
   width: 100%;
 }
 
@@ -389,13 +389,27 @@ a.secondary {
     min-height: 100vh;
     margin: 0 0 40px 0;
   }
+
+  .sectionHeading {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .floatingImageDivider {
+    width: calc(100% - 48px);
+    margin: 0 24px;
+  }
+
+  .designPortfolioCTA {
+    padding: 24px 24px 0;
+  }
 }
 
 @media (max-width: 600px) {
   .floatingImageSection {
-    margin: 60px 0 60px 0;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    margin: 32px 0 12px 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .threeContainer {
@@ -407,7 +421,7 @@ a.secondary {
 }
 
 @media (max-width: 450px) {
-  .floatingImageSection { margin: 40px 0 40px 0; }
+  .floatingImageSection { margin: 24px 0 8px 0; }
   .threeContainer { height: 24vh; min-height: 80px; }
 }
 
@@ -419,12 +433,130 @@ a.secondary {
   }
   
   .floatingImageSection {
-    margin: 100px 0;
+    margin: 40px 0;
     height: auto;
   }
   
   .mainSplit {
     margin: 0 0 30px 0;
+  }
+}
+
+/* Design Portfolio CTA Section */
+.designPortfolioSection {
+  width: 100%;
+  padding: 0 0 60px 0;
+}
+
+.designPortfolioCTA {
+  padding: 64px 60px 0;
+}
+
+.designPortfolioButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 40px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.25s, border-color 0.25s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  gap: 32px;
+}
+
+.designPortfolioButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(255, 0, 0, 0) 0%, transparent 70%);
+  transition: opacity 0.4s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.designPortfolioButton:hover::before {
+  opacity: 1;
+}
+
+.designPortfolioButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.designPortfolioBtnLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.designPortfolioBtnEyebrow {
+  color: #d4a55a;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.designPortfolioBtnLabel {
+  font-size: 2.4rem;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+
+.designPortfolioBtnSub {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.88rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.designPortfolioBtnArrow {
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.3);
+  transition: transform 0.25s, color 0.25s;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.designPortfolioButton:hover .designPortfolioBtnArrow {
+  transform: translateX(8px);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Experience section links */
+.experienceLink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 20px;
+}
+
+.experienceLink:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .designPortfolioCTA {
+    padding: 24px 24px 0;
+  }
+  .designPortfolioButton {
+    padding: 28px 28px;
+  }
+  .designPortfolioBtnLabel {
+    font-size: 1.6rem;
+  }
+  .designPortfolioBtnArrow {
+    font-size: 1.8rem;
   }
 }
 

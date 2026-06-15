@@ -1,0 +1,84 @@
+MINTLIFY SOLUTIONS ENGINEER - RESUME TAILORING SESSION
+=======================================================
+Date: May 31, 2026
+
+
+DISCOVERY Q&A
+=============
+
+Q1: Were the demos for the 30 SEs custom-built or general product walkthroughs?
+A: The 30 SE interactions are primarily customer environment/use case discovery, general product capability walkthroughs, and demos of the Python SDK and dashboards. The 6-8 high-touch accounts are where custom-built automation scripts, dashboards, and solutions are created for specific customers.
+
+Q2: Did any of the high-touch custom engagements directly unblock or close a deal?
+A: Deal signature details were obfuscated by the SEs. However, Lucas was brought in on several customer interactions to dynamically demo specific use cases tailored to a customer's networking concerns. Impact is positive but not directly quantifiable to a deal close.
+
+Q3: Did you translate customer requirements into specs or roadmap inputs for engineering?
+A: Yes. Customer API feature requests from calls are logged and communicated directly with API Product Lifecycle Management and Engineering as requirements for future product enhancements.
+
+Q4: Did you ever push back on what was feasible and scope a realistic alternative?
+A: Yes. A customer on a legacy product wanted a configuration use case that wasn't possible on that version. After significant back-and-forth to reach mutual understanding of requirements, the team was honest that the legacy product couldn't support it but the newer version could. This conversation resulted in a reframing of what the customer purchased from HPE.
+
+Q5: What documentation platforms has HPE used, and what friction have you experienced?
+A: HPE has used Swagger (open source) and currently uses Readme.io. Key friction points with Readme:
+  - Scale issues: one networking product had so many APIs it had to be split into two separate Readme projects (monitoring/reporting/troubleshooting vs. configuration)
+  - OAS file size: configuration API OAS files were so large that Readme's UI couldn't handle rendering them, causing platform-level issues
+
+Q6: Were the Postman collections intentionally designed to be scalable, or did they grow organically?
+A: Originally built for a single non-technical customer who had no idea where to start with APIs. The collection and accompanying guides walked a zero-experience user through discovering and testing APIs for their automation use cases. Recognized that many customers share this problem, so the single-customer solution was scaled out to benefit many others across a wide technical spectrum (non-technical users through highly technical IT personnel).
+
+Q7: Did you write technical specs or project plans that engineering built against? Did you ever push back on timelines?
+A: Yes. Scoped SDK modules and managed development timelines for an automation team of 5. Pushed back on timelines when APIs in beta phase had errors that needed to be fixed before workflows could be published. Filed bugs directly with Engineering and coordinated fixes before releasing automation to customers.
+
+Q8: How fast can you build a functional prototype? What's the most you've pulled off under time pressure?
+A: Can go from zero to working demo within 48 hours. Example: a customer wanted to see a floor-plan AP visualization. Lucas had never worked with those API endpoints before but added the visualization to an existing dashboard demo. The customer was genuinely shocked by the quality and speed of delivery - they were not expecting a demo at all for that call.
+
+Q9: Can you give an example of adjusting your communication for different audiences mid-engagement?
+A: Yes. Common scenario: C-suite executives on a call who eventually drop off and hand over to their IT department. This requires leading with high-level executive-facing value while maintaining enough technical depth to shift gears immediately when the IT team takes over. Discovery calls involve a lot of "vibe sensing" to understand use cases, whether a customer is single or multi-vendor, their level of interest in specific product areas, and where to expand their footprint.
+
+Q10: Did you build something that scaled your impact beyond your own direct involvement?
+A: Yes. Built a full-stack network monitoring demo environment: Next.js custom dashboard UI + Grafana + InfluxDB (time series DB) + Docker. Originally built for a single customer, then scoped out to fit larger campus and branch customers, then open-sourced on GitHub. Created a YouTube demo walkthrough. Multiple sales engineers independently reached out to get the demo running on their own machines for customer demos. Customers saw the YouTube video and asked how to get it. Turned a single customer solution into a repeatable self-service SE sales tool.
+
+
+TAILORED RESUME - MINTLIFY SOLUTIONS ENGINEER
+==============================================
+
+HPE - Intermediate Technical Marketing Engineer                    CA | Mar. 2025 - Current
+
+- Designed and open-sourced a full-stack network monitoring demo environment (Next.js, Grafana, InfluxDB, Docker) originally built for a single customer, dockerized and published to GitHub, enabling sales engineers to independently deploy it for their own customer demos; inbound customer interest driven by a YouTube walkthrough turned a one-off custom build into a repeatable, self-service sales asset
+- Rapidly built a custom floor-plan AP visualization dashboard for a customer call with 48 hours notice, integrating an unfamiliar API set into an existing demo environment from scratch; customer exceeded expectations and expressed surprise at the quality and speed of delivery
+- Identified that a customer's target automation use case was incompatible with their legacy networking product; scoped what was technically feasible on both platforms, communicated constraints clearly to the SE team, and outlined a path forward on the updated product; outcome directly reframed the customer's purchase decision
+- Supported 30+ sales engineer engagements per year across SMB and enterprise accounts through technical discovery, product capability walkthroughs, and live SDK and dashboard demos; maintained 6-8 high-touch customer accounts requiring custom-built automation scripts, dashboards, and integration solutions
+- Regularly navigated mixed technical and executive audiences within the same engagement, leading high-level business value conversations with C-suite buyers before pivoting to deep technical depth with IT and infrastructure teams as calls progressed
+- Served as the technical interface between field customers and internal PLM and Engineering teams, systematically capturing API feature requests from discovery calls, translating them into structured requirements, and communicating directly with product and engineering to influence the networking API roadmap
+- Maintained pre-release quality gates for SDK and automation workflow releases, filing API bugs discovered during beta testing directly with Engineering and blocking releases until fixes were validated, preventing defective automation from reaching partners
+- Built and scaled a beginner-friendly Postman collection and API onboarding guide from a single non-technical customer's use case into a self-service resource generating 15,000+ pageviews with direct adoption by Fortune 500 enterprises, with no ongoing involvement required after the initial build
+- Built MCP server integrations and technical documentation enabling customers to adopt AI/LLM tooling with Central API; managed HPE Aruba Networking Developer Hub on Readme.io at scale, architecting workarounds for platform limitations around OAS file size and API volume that required splitting a single product's docs across multiple projects
+
+
+HPE - Technical Marketing Engineer                                  CA | Sept. 2023 - Mar. 2025
+
+- Redesigned HPE Aruba Networking Developer Hub (full-stack Next.js/React), leading UX research, Figma wireframing, and front-end development end-to-end; platform now serves 650,000+ annual pageviews and is the primary API discoverability surface for external partners and enterprise developers
+- Built reusable partner integration assets (Postman collections, Python SDK modules, onboarding guides, webhook examples) designed for self-service adoption across MSP and enterprise customers, reducing the need for direct technical support and scaling enablement beyond one-to-one interactions
+- Delivered custom automation solutions for 5+ high-touch customer engagements, writing Python scripts for device and client management workflows, scoping requirements, conducting enablement labs, and maintaining proactive communication through deployment
+
+
+HPE - Technical Marketing Engineer Intern                           CA | June - Sept. 2022
+
+- Designed and built a full-stack automation platform (Next.js/React + AWS S3) from requirements gathering through production deployment within a fixed internship timeline, leading Figma wireframing, UX review sessions, and cross-functional collaboration with design, automation, and product stakeholders to deliver a production-ready solution
+
+
+INRIX - Software Development Engineer Intern                        WA | June - Sept. 2021
+
+- Contributed to full-stack development of live traffic data products, building GraphQL data query layers and live-updating web pages in partnership with UX, backend engineers, and product management
+
+
+COVER LETTER FRAMING NOTES
+===========================
+
+1. Lead with the Readme.io pain point - you have managed docs at scale and hit the exact limitations Mintlify is designed to solve. You are not just selling their product, you have lived the problem firsthand as both a builder and a platform user.
+
+2. The "one customer to open-source SE tool" arc is your single strongest story for this role. It is literally the JD in practice: "turn one-off custom work into repeatable, productized capabilities."
+
+3. The floor plan demo story is your "I ship fast" proof point. Use it in interviews when asked about speed or prototyping under pressure.
+
+4. The legacy product scoping story demonstrates you can have honest, difficult technical conversations with customers that reframe a deal - core to the Solutions Engineer motion.
