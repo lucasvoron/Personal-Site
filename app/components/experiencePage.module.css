@@ -1,4 +1,5 @@
-/* ── Page shell ── */
+/* ── Shared experience page layout ── matches design portfolio / about page style */
+
 .wrapper {
   min-height: 100vh;
   width: 100%;
@@ -52,31 +53,32 @@
   gap: 24px;
 }
 
-/* ── Profile card (bio + headshot) ── */
-.profileCard {
+/* ── Skill marquee row ── */
+.marqueeRow {
+  margin-bottom: 8px;
+}
+
+/* ── Role card ── */
+.roleCard {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 48px;
+  flex-direction: column;
+  gap: 20px;
   padding: 40px 48px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px;
-  position: relative;
-  overflow: hidden;
   transition: border-color 0.25s, background 0.25s;
 }
 
-.profileCard:hover {
+.roleCard:hover {
   background: rgba(255, 255, 255, 0.04);
   border-color: rgba(255, 255, 255, 0.14);
 }
 
-.bioSection {
-  flex: 1;
+.roleHeader {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 4px;
 }
 
 .eyebrow {
@@ -85,67 +87,64 @@
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  margin: 0 0 8px;
 }
 
-.bio {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.05rem;
+.roleTitle {
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 200;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+}
+
+.roleDate {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
   font-weight: 300;
-  line-height: 1.75;
+  letter-spacing: 0.04em;
   margin: 0;
 }
 
-.headshotWrapper {
-  flex-shrink: 0;
+.roleBody {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+  width: 100%;
+  margin: 0;
 }
 
-.headshot {
-  width: 260px;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-  display: block;
-  filter: none !important;
+/* ── Metrics grid ── */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 4px;
 }
 
-/* ── Skills card ── */
-.skillsCard {
-  padding: 32px 48px;
+.metricCard {
+  padding: 20px 24px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  transition: border-color 0.25s, background 0.25s;
+  border-radius: 6px;
 }
 
-.skillsCard:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(255, 255, 255, 0.13);
-}
-
-.skillsList {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skillPill {
-  color: rgba(255, 255, 255, 0.6);
+.metricTitle {
+  color: #00a96e;
   font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  padding: 6px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.03);
-  transition: border-color 0.2s, color 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
 }
 
-.skillPill:hover {
-  border-color: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.9);
+.metricText {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ── Responsive ── */
@@ -156,36 +155,21 @@
     padding-right: 24px;
   }
 
-  .profileCard {
+  .roleCard {
     padding: 28px 28px;
-    gap: 32px;
-  }
-
-  .skillsCard {
-    padding: 24px 28px;
-  }
-
-  .headshot {
-    width: 200px;
-  }
-}
-
-@media (max-width: 640px) {
-  .profileCard {
-    flex-direction: column-reverse;
-    gap: 24px;
-  }
-
-  .headshotWrapper {
-    align-self: center;
-  }
-
-  .headshot {
-    width: 100%;
-    max-width: 280px;
   }
 
   .heading {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .roleTitle {
+    font-size: 1.3rem;
   }
 }

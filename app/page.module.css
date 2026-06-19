@@ -276,18 +276,10 @@ a.secondary {
   width: 100%;
 }
 
-/* Make homepage images black & white by default, restore color on hover */
-.page img:not([data-no-filter]),
-.page .floatingImage {
-  filter: grayscale(100%) contrast(1) brightness(0.95);
-  transition: filter 280ms ease, transform 200ms ease;
-}
-
-/* When hovering the image or its link, remove the filter */
+/* Keep a subtle hover motion effect on homepage images */
 .page .imageWrapper:hover .floatingImage,
 .page .imageLink:hover .floatingImage,
 .page .imageLink:focus .floatingImage {
-  filter: none;
   transform: translateY(-3px) scale(1.02);
 }
 

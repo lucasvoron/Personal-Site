@@ -10,6 +10,14 @@ import SiteFooter from "./components/SiteFooter";
 import LinkedInCarousel from "./components/LinkedInCarousel";
 
 export default function Home() {
+  const saveScroll = () => {
+    try {
+      sessionStorage.setItem('lucas_scroll_y', String(window.scrollY || window.pageYOffset || 0));
+    } catch (e) {
+      // ignore storage errors
+    }
+  };
+
   // useEffect(() => {
   //   const container = document.getElementById("container");
   //   if (container) {
@@ -81,17 +89,17 @@ export default function Home() {
   <LinkedInCarousel />
       <div>
         <h2 className={styles.sectionHeading}>Experience</h2>
-        <Link href="/hpe" className={styles.experienceLink}>
+        <Link href="/hpe" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/hpe1.webp","/hpe2.webp","/hpe3.webp","/hpe4.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
+              images={["/hpe1.webp","/hpe8.webp","/hpe2.webp","/hpe9.webp","/hpe3.webp","/hpe10.webp","/hpe4.webp","/hpe11.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
               title="HPE"
               position="Intermediate Technical Marketing Engineer"
               date="Summer 2022 - Present"
             />
           </div>
         </Link>
-        <Link href="/inrix" className={styles.experienceLink}>
+        <Link href="/inrix" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
               images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp"]}
@@ -101,7 +109,7 @@ export default function Home() {
             />
           </div>
         </Link>
-        <Link href="/scu" className={styles.experienceLink}>
+        <Link href="/scu" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
               images={["/scu1.webp","/scu2.webp","/scu3.webp","/scu4.webp","/scu5.webp","/scu6.webp","/scu7.webp"]}
@@ -111,7 +119,7 @@ export default function Home() {
             />
           </div>
         </Link>
-        <Link href="/tiposi" className={styles.experienceLink}>
+        <Link href="/tiposi" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
               images={["/tiposi1.webp","/tiposi2.webp","/tiposi3.webp","/tiposi4.webp","/tiposi5.webp","/tiposi6.webp","/tiposi7.webp"]}

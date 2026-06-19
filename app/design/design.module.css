@@ -247,7 +247,7 @@
 .projectDescription {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.92rem;
-  max-width: 800px;
+  width: 100%;
   line-height: 1.7;
   margin: 0 0 24px;
 }

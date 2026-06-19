@@ -1,20 +1,13 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./FloatingImageCluster.module.css";
 
 export default function FloatingImageCluster({ images, title, position, date }) {
-  const saveScroll = () => {
-    try {
-      sessionStorage.setItem('lucas_scroll_y', String(window.scrollY || window.pageYOffset || 0));
-    } catch (e) {}
-  };
-
   const renderStrip = (keyPrefix) => (
     <div className={styles.marqueeStrip} aria-hidden={keyPrefix !== 'a'}>
       {images.map((src, idx) => (
         <div key={keyPrefix + idx} className={styles.imageWrapper}>
-          <Link href={`/${title.toLowerCase()}`} className={styles.imageLink} onClick={saveScroll}>
+          <div className={styles.imageLink}>
             <Image
               src={src}
               alt={title + ' image ' + (idx + 1)}
@@ -24,7 +17,7 @@ export default function FloatingImageCluster({ images, title, position, date }) 
               sizes="40vw"
               loading="lazy"
             />
-          </Link>
+          </div>
         </div>
       ))}
     </div>
