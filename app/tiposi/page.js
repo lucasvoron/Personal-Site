@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function TiposiPage() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ "--metric-title-color": "#00b6d6" }}>
       <div className={styles.header}>
         <Link href="/" className={styles.backLink}>← Back</Link>
         <h1 className={styles.heading}>TIPOSI</h1>

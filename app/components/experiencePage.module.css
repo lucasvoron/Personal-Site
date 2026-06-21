@@ -6,6 +6,7 @@
   background-color: #ffffff;
   background-image: radial-gradient(ellipse at center top, #000 0%, #000000 70%);
   font-family: var(--font-geist-sans);
+  --metric-title-color: #00a96e;
 }
 
 /* ── Header ── */
@@ -41,7 +42,7 @@
 .subheading {
   color: rgba(255, 255, 255, 0.45);
   font-size: 1rem;
-  margin: 0 0 60px;
+  margin: 0 0 40px;
 }
 
 /* ── Body ── */
@@ -132,7 +133,7 @@
 }
 
 .metricTitle {
-  color: #00a96e;
+  color: var(--metric-title-color);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.08em;

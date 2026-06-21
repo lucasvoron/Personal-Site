@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function InrixPage() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ "--metric-title-color": "#243775" }}>
       <div className={styles.header}>
         <Link href="/" className={styles.backLink}>← Back</Link>
         <h1 className={styles.heading}>INRIX</h1>

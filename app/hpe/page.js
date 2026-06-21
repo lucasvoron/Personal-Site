@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function HpePage() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ "--metric-title-color": "#00a96e" }}>
       <div className={styles.header}>
         <Link href="/" className={styles.backLink}>← Back</Link>
         <h1 className={styles.heading}>HPE</h1>

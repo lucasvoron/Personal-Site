@@ -95,7 +95,7 @@ export default function Home() {
         <Link href="/hpe" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/hpe1.webp","/hpe8.webp","/hpe2.webp","/hpe9.webp","/hpe3.webp","/hpe10.webp","/hpe4.webp","/hpe11.webp","/hpe7.webp"]}
+              images={["/experience/hpe/hpe1.webp","/experience/hpe/hpe8.webp","/experience/hpe/hpe2.webp","/experience/hpe/hpe9.webp","/experience/hpe/hpe3.webp","/experience/hpe/hpe10.webp","/experience/hpe/hpe4.webp","/experience/hpe/hpe11.webp","/experience/hpe/hpe7.webp"]}
               title="HPE"
               position="Intermediate Technical Marketing Engineer"
               date="Summer 2022 - Present"
@@ -105,7 +105,7 @@ export default function Home() {
         <Link href="/inrix" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp","/inrix8.webp"]}
+              images={["/experience/inrix/inrix1.webp","/experience/inrix/inrix2.webp","/experience/inrix/inrix3.webp","/experience/inrix/inrix4.webp","/experience/inrix/inrix5.webp","/experience/inrix/inrix6.webp","/experience/inrix/inrix7.webp","/experience/inrix/inrix8.webp"]}
               title="INRIX"
               position="Software Development Engineer Intern"
               date="Summer 2021"
@@ -115,7 +115,7 @@ export default function Home() {
         <Link href="/scu" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/scu1.webp","/scu2.webp","/scu3.webp","/scu4.webp","/scu5.webp","/scu6.webp","/scu7.webp"]}
+              images={["/experience/scu/scu1.webp","/experience/scu/scu2.webp","/experience/scu/scu3.webp","/experience/scu/scu4.webp","/experience/scu/scu5.webp","/experience/scu/scu6.webp","/experience/scu/scu7.webp"]}
               title="SCU"
               position="Peer Career Advisor & Resident Assistant"
               date="Fall 2019 - Spring 2023"
@@ -125,7 +125,7 @@ export default function Home() {
         <Link href="/tiposi" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/tiposi1.webp","/tiposi2.webp","/tiposi3.webp","/tiposi4.webp","/tiposi5.webp","/tiposi6.webp","/tiposi7.webp"]}
+              images={["/experience/tiposi/tiposi1.webp","/experience/tiposi/tiposi2.webp","/experience/tiposi/tiposi3.webp","/experience/tiposi/tiposi4.webp","/experience/tiposi/tiposi5.webp","/experience/tiposi/tiposi6.webp","/experience/tiposi/tiposi7.webp"]}
               title="TIPOSI"
               position="Medical Device Design Consultant"
               date="Summer 2020"

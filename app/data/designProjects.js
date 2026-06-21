@@ -22,19 +22,19 @@ export const designCompanies = [
   {
     id: "hpe",
     name: "HPE",
-    logo: "/HPElogo.png",
+    logo: "/design/hpe/HPElogo.png",
     accent: "#00a96e",
   },
   {
     id: "color-harmonie",
     name: "color harmonie",
-    logo: "/color_harmonie.svg",
+    logo: "/design/color-harmonie/color_harmonie.svg",
     accent: "#1543D7",
   },
   {
     id: "villa-de-cycas",
     name: "Villa de Cycas",
-    logo: "/villa_de_cycas.svg",
+    logo: "/design/villa-de-cycas/villa_de_cycas.svg",
     accent: "#5a0202",
   }
 ];

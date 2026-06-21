@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 
 export default function ScuPage() {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={{ "--metric-title-color": "#b42e2e" }}>
       <div className={styles.header}>
         <Link href="/" className={styles.backLink}>← Back</Link>
         <h1 className={styles.heading}>SCU</h1>
