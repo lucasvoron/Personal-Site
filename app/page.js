@@ -52,8 +52,10 @@ export default function Home() {
     <Link href="/resume" className={styles.navButton} aria-label="Resume" title="Resume">
       <svg viewBox="0 0 24 24" fill="currentColor" className={`${styles.navIcon} ${styles.resumeIcon}`}><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 15h8v2H8v-2zm0-3h8v2H8v-2z"/></svg>
     </Link>
-    <Link href="/about" className={styles.aboutLink} aria-label="About" title="About">
-      <Image src="/dvd.webp" alt="Profile" fill sizes="42px" priority className={styles.aboutIcon} />
+    <Link href="/about" className={styles.navButton} aria-label="About" title="About">
+      <svg viewBox="0 0 24 24" fill="currentColor" className={styles.navIcon}>
+        <path d="M12 12a5 5 0 100-10 5 5 0 000 10zm0 2c-4.418 0-8 2.239-8 5v1h16v-1c0-2.761-3.582-5-8-5z" />
+      </svg>
     </Link>
   </nav>
       <main className={styles.mainSplit}>
@@ -63,11 +65,12 @@ export default function Home() {
             <Image src="/palette.webp" alt="Palette" fill sizes="100vw" priority className={styles.palette} />
             <h1 className={styles.heroName}>LUCAS VORON</h1>
             {/* <p className={styles.description}>SOFTWARE ENGINEER II</p> */}
+            <p className={styles.mantra}>Bringing concepts to life from design to deployment.</p>
+            <br />
             <p className={styles.education}>Santa Clara University</p>      
             <p className={styles.education}>Bachelor in Computer Science & Engineering</p>
             <p className={styles.education}>Minor in Mathematics</p>
-            <br />
-            <p className={styles.mantra}>Bringing concepts to life from design to deployment.</p>
+
           </div>
           {/* <div id="container" className={styles.threeContainer}></div> */}
         </section>
@@ -92,7 +95,7 @@ export default function Home() {
         <Link href="/hpe" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/hpe1.webp","/hpe8.webp","/hpe2.webp","/hpe9.webp","/hpe3.webp","/hpe10.webp","/hpe4.webp","/hpe11.webp","/hpe5.webp","/hpe6.webp","/hpe7.webp"]}
+              images={["/hpe1.webp","/hpe8.webp","/hpe2.webp","/hpe9.webp","/hpe3.webp","/hpe10.webp","/hpe4.webp","/hpe11.webp","/hpe7.webp"]}
               title="HPE"
               position="Intermediate Technical Marketing Engineer"
               date="Summer 2022 - Present"
@@ -102,7 +105,7 @@ export default function Home() {
         <Link href="/inrix" className={styles.experienceLink} onClick={saveScroll}>
           <div className={styles.floatingImageSection}>
             <FloatingImageCluster
-              images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp"]}
+              images={["/inrix1.webp","/inrix2.webp","/inrix3.webp","/inrix4.webp","/inrix5.webp","/inrix6.webp","/inrix7.webp","/inrix8.webp"]}
               title="INRIX"
               position="Software Development Engineer Intern"
               date="Summer 2021"

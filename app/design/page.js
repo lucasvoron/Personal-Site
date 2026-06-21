@@ -123,6 +123,9 @@ export default function DesignPage() {
     );
   }
 
+  const activeCompany = designCompanies.find((c) => c.id === openCompany) || null;
+  const activeProjects = openCompany ? (designProjectsByCompany[openCompany] ?? []) : [];
+
   // ── Portfolio page ──────────────────────────────────────────────────────
   return (
     <div className={styles.wrapper}>
@@ -161,60 +164,60 @@ export default function DesignPage() {
                   <span className={styles.logoName}>{company.name}</span>
                 )}
               </button>
-
-              {/* Inline expanded panel */}
-              {isOpen && (
-                <div className={styles.panel}>
-                  <div className={styles.panelInner}>
-                    {(designProjectsByCompany[company.id] ?? []).length === 0 ? (
-                      <p className={styles.emptyState}>
-                        No projects yet — add entries to{" "}
-                        <code>app/data/designProjects.js</code>.
-                      </p>
-                    ) : (
-                      (designProjectsByCompany[company.id] ?? []).map((project) => (
-                        <section key={project.id} className={styles.projectSection}>
-                          <h2 className={styles.projectTitle}>{project.title}</h2>
-                          <p className={styles.projectDescription}>{project.description}</p>
-
-                          {project.wireframes.length > 0 ? (
-                            <div className={styles.wireframeStrip}>
-                              {project.wireframes.map((src, i) => (
-                                <button
-                                  key={src}
-                                  className={styles.wireframeThumb}
-                                  onClick={() => openLightbox(project.id, i)}
-                                  aria-label={`View wireframe ${i + 1} of ${project.wireframes.length}`}
-                                >
-                                  <div className={styles.thumbImageWrapper}>
-                                    <Image
-                                      src={src}
-                                      alt={`${project.title} wireframe ${i + 1}`}
-                                      fill
-                                      sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-                                      className={styles.thumbImage}
-                                      style={{ objectFit: "cover" }}
-                                    />
-                                  </div>
-                                  <span className={styles.thumbIndex}>{i + 1}</span>
-                                </button>
-                              ))}
-                            </div>
-                          ) : (
-                            <p className={styles.noWireframes}>Wireframes coming soon.</p>
-                          )}
-
-                          <div className={styles.projectDivider} />
-                        </section>
-                      ))
-                    )}
-                  </div>
-                </div>
-              )}
             </div>
           );
         })}
       </div>
+
+      {/* Shared expanded panel (keeps all company cards visible at top) */}
+      {activeCompany && (
+        <div className={styles.panel} style={{ "--accent": activeCompany.accent }}>
+          <div className={styles.panelInner}>
+            {activeProjects.length === 0 ? (
+              <p className={styles.emptyState}>
+                No projects yet — add entries to{" "}
+                <code>app/data/designProjects.js</code>.
+              </p>
+            ) : (
+              activeProjects.map((project) => (
+                <section key={project.id} className={styles.projectSection}>
+                  <h2 className={styles.projectTitle}>{project.title}</h2>
+                  <p className={styles.projectDescription}>{project.description}</p>
+
+                  {project.wireframes.length > 0 ? (
+                    <div className={styles.wireframeStrip}>
+                      {project.wireframes.map((src, i) => (
+                        <button
+                          key={src}
+                          className={styles.wireframeThumb}
+                          onClick={() => openLightbox(project.id, i)}
+                          aria-label={`View wireframe ${i + 1} of ${project.wireframes.length}`}
+                        >
+                          <div className={styles.thumbImageWrapper}>
+                            <Image
+                              src={src}
+                              alt={`${project.title} wireframe ${i + 1}`}
+                              fill
+                              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                              className={styles.thumbImage}
+                              style={{ objectFit: "cover" }}
+                            />
+                          </div>
+                          <span className={styles.thumbIndex}>{i + 1}</span>
+                        </button>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className={styles.noWireframes}>Wireframes coming soon.</p>
+                  )}
+
+                  <div className={styles.projectDivider} />
+                </section>
+              ))
+            )}
+          </div>
+        </div>
+      )}
 
       {lightbox.projectId && (
         <Lightbox

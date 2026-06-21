@@ -2,7 +2,8 @@
 .wrapper {
   min-height: 100vh;
   width: 100%;
-  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center top, #000 0%, #000000 70%);
   font-family: var(--font-geist-sans);
   padding-bottom: 100px;
 }
@@ -18,10 +19,10 @@
 
 .backLink {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.45);
   font-size: 0.85rem;
   text-decoration: none;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   letter-spacing: 0.05em;
   transition: color 0.2s;
 }

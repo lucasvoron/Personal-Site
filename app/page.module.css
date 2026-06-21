@@ -22,7 +22,8 @@
   width: 100%;
   height: calc(100% - 100vh);
   min-height: 100vh;
-  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center top, #000000 0%, #000000 70%);
   z-index: -2;
   pointer-events: none;
 }
@@ -33,7 +34,7 @@
   padding: 0;
   font-family: var(--font-geist-sans);
   position: relative;
-  background: transparent;
+  background: #ffffff;
 }
 
 .subPage::after {
@@ -43,7 +44,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center top, #000 0%, #000000 70%);
   z-index: -2;
   pointer-events: none;
 }
@@ -106,7 +108,7 @@
 
 .heroName {
   display: flex;
-  color: #925d28;
+  color: #000;
   font-size: 11vw;
   font-weight: 700;
   letter-spacing: 0em;
@@ -149,7 +151,7 @@
 .mantra {
   margin: 40px 0 0 10px;
   color: #d94646;
-  font-size: 1.5vw;
+  font-size: 1.75vw;
   font-weight: 300;
   text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.9);
 }
@@ -488,7 +490,7 @@ a.secondary {
 }
 
 .designPortfolioBtnEyebrow {
-  color: #d4a55a;
+  color: #d94646;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.18em;

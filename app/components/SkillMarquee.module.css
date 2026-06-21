@@ -1,16 +1,16 @@
 .marquee {
   width: 100%;
   overflow: hidden;
-  background: #000;
-  padding: 12px 0;
+  background: transparent;
+  padding: 0;
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 0;
   margin: 16px 0 28px 0;
 }
 
 .marqueeInner {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   transform: translateX(0);
   animation: scrollLeft 18s linear infinite;
@@ -23,7 +23,7 @@
 
 .skillRow {
   display: flex;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
   white-space: nowrap;
   flex-wrap: nowrap;
@@ -31,27 +31,29 @@
 
 .skillItem {
   display: flex;
-  gap: 20px;
+  gap: 0;
   align-items: center;
-  color: #e6e6e6;
-  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
   letter-spacing: 0.06em;
   flex: 0 0 auto;
   white-space: nowrap;
-}
-
-.ledDot {
-  width: 5px;
-  height: 5px;
-  border-radius: 0%;
-  background: #fff;
-  animation: flicker 1.8s linear infinite;
+  padding: 6px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .skillText {
-  font-size: 1.05rem;
-  color: #fff;
+  font-size: 0.82rem;
+  color: inherit;
   white-space: nowrap;
+}
+
+.skillItem:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 @keyframes scrollLeft {
@@ -59,9 +61,3 @@
   100% { transform: translateX(-50%); }
 }
 
-@keyframes flicker {
-  0% { opacity: 1; }
-  40% { opacity: 0.85; }
-  60% { opacity: 1; }
-  100% { opacity: 0.9; }
-}

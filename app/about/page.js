@@ -6,7 +6,7 @@ import SiteFooter from "../components/SiteFooter";
 const skills = [
   "Next.js", "React", "Python", "Node.js", "Docker",
   "Grafana", "InfluxDB", "Prometheus", "Figma", "UI/UX Design",
-  "REST APIs", "GraphQL", "Git", "CSS", "SQL",
+  "REST APIs", "GraphQL", "Git", "CSS", "HTML5", "JavaScript", "WordPress", "CI/CD",
 ];
 
 export default function AboutPage() {

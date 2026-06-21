@@ -126,7 +126,7 @@
 }
 
 .link {
-  color: #d4a55a;
+  color: #D94646;
   font-size: 0.85rem;
   text-decoration: none;
   font-weight: 500;
@@ -134,7 +134,7 @@
 }
 
 .link:hover {
-  color: #f0c47a;
+  color: #860C00;
 }
 
 /* Controls */

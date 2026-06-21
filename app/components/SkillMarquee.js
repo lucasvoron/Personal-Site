@@ -9,7 +9,6 @@ export default function SkillMarquee({ skills }) {
     <div className={styles.skillRow} aria-hidden={keyPrefix !== "a"}>
       {list.map((s, i) => (
         <div key={keyPrefix + i} className={styles.skillItem}>
-          <span className={styles.ledDot} />
           <span className={styles.skillText}>{s}</span>
         </div>
       ))}

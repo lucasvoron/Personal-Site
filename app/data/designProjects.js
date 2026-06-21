@@ -25,6 +25,18 @@ export const designCompanies = [
     logo: "/HPElogo.png",
     accent: "#00a96e",
   },
+  {
+    id: "color-harmonie",
+    name: "color harmonie",
+    logo: "/color_harmonie.svg",
+    accent: "#1543D7",
+  },
+  {
+    id: "villa-de-cycas",
+    name: "Villa de Cycas",
+    logo: "/villa_de_cycas.svg",
+    accent: "#5a0202",
+  }
 ];
 
 export const hpeDesignProjects = [
@@ -85,7 +97,37 @@ export const hpeDesignProjects = [
   },
 ];
 
+export const colorHarmonieDesignProjects = [
+  {
+    id: "color-harmonie",
+    title: "color harmonie",
+    description:
+      "A Chrome extension designed as a shopping overlay that helps users find clothing and products that match their personal color season. By surfacing a curated palette tied to the user's skin tone undertones, the extension guides shoppers toward colors that complement them best while browsing any online retailer.",
+    wireframes: [
+      "/design/color-harmonie/color-harmonie-01.webp",
+      "/design/color-harmonie/color-harmonie-02.webp",
+      "/design/color-harmonie/color-harmonie-03.webp",
+    ],
+  },
+];
+
+export const villaDeCycasDesignProjects = [
+  {
+    id: "villa-de-cycas",
+    title: "Villa de Cycas",
+    description:
+      "A website design for artisan winery Villa de Cycas, focused on showcasing the unique character of their boutique wines and the story behind their family-owned vineyard. The design emphasizes rich visuals of the winemaking process and the terroir, while providing an intuitive navigation experience for users to explore the wine selection, learn about the vineyard's history, and easily make purchases online.",
+    wireframes: [
+      "/design/villa-de-cycas/villa-de-cycas-01.webp",
+      "/design/villa-de-cycas/villa-de-cycas-02.webp",
+      "/design/villa-de-cycas/villa-de-cycas-03.webp",
+    ],
+  },
+];
+
 /** Convenience lookup: company id → projects array */
 export const designProjectsByCompany = {
   hpe: hpeDesignProjects,
+  "color-harmonie": colorHarmonieDesignProjects,
+  "villa-de-cycas": villaDeCycasDesignProjects,
 };

@@ -1,13 +1,89 @@
+/* ── Page shell ── */
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center top, #000 0%, #000000 100%);
+  font-family: var(--font-geist-sans);
+}
+
+/* ── Header ── */
+.header {
+  padding: 60px 60px 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.backLink {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+  text-decoration: none;
+  margin-bottom: 32px;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heading {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.subheading {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1rem;
+  margin: 0 0 60px;
+}
+
+/* ── Body ── */
+.body {
+  padding: 0 60px 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resumeCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.resumeCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.eyebrow {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
 .pdfWrapper {
-  margin-top: 32px;
-  width: 90%;
-  max-width: 800px;
-  align-self: center;
+  width: 100%;
   aspect-ratio: 8.5 / 11;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: #111;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .pdfEmbed {
@@ -17,20 +93,52 @@
 }
 
 .downloadButton {
-  align-self: center;
-  margin-top: 24px;
-  padding: 12px 28px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  color: #fff;
-  font-size: 0.9rem;
+  align-self: flex-start;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
   text-decoration: none;
-  letter-spacing: 0.04em;
-  transition: background 200ms ease, border-color 200ms ease;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 .downloadButton:hover {
-  background: rgba(255, 255, 255, 0.14);
   border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 900px) {
+  .header,
+  .body {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .resumeCard {
+    padding: 28px 28px;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .resumeCard {
+    padding: 24px 20px;
+  }
+
+  .subheading {
+    margin-bottom: 36px;
+  }
+
+  .downloadButton {
+    align-self: stretch;
+    text-align: center;
+  }
 }

@@ -2,7 +2,8 @@
 .wrapper {
   min-height: 100vh;
   width: 100%;
-  background: radial-gradient(ellipse at center top, #4e3215 0%, #000000 50%);
+  background-color: #ffffff;
+  background-image: radial-gradient(ellipse at center top, #000 0%, #000000 70%);
   font-family: var(--font-geist-sans);
 }
 
@@ -101,9 +102,10 @@
 
 .headshot {
   width: 260px;
-  height: auto;
-  border-radius: 6px;
+  height: 260px;
+  border-radius: 50%;
   object-fit: cover;
+  object-position: center;
   display: block;
   filter: none !important;
 }
@@ -167,6 +169,7 @@
 
   .headshot {
     width: 200px;
+    height: 200px;
   }
 }
 
@@ -183,6 +186,7 @@
   .headshot {
     width: 100%;
     max-width: 280px;
+    height: 280px;
   }
 
   .heading {
