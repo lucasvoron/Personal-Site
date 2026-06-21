@@ -34,7 +34,7 @@ export const designCompanies = [
   {
     id: "villa-de-cycas",
     name: "Villa de Cycas",
-    logo: "/design/villa-de-cycas/villa_de_cycas.svg",
+    logo: "/design/villa-de-cycas/Villa_de_Cycas.svg",
     accent: "#5a0202",
   }
 ];
