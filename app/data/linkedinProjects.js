@@ -27,6 +27,15 @@ const linkedinProjects = [
     skills: ["Open Source", "Software Defined Networking", "Network Automation", "Developer Experience"],
   },
   {
+    title: "HPE Developer Meetup Webinar: Building Network Visualizers",
+    description:
+      "Presented a live webinar for the HPE Developer Community on building real-time network visualizers with HPE Aruba Networking Central APIs, covering data collection, visualization design, and practical implementation patterns.",
+    image: "/projects/hpe-developer-meetup/project-hpe-developer-meetup.png",
+    link: "https://www.youtube.com/watch?v=kCKT2OkG78E",
+    association: "Hewlett Packard Enterprise",
+    skills: ["Public Speaking", "Software Defined Networking", "Data Visualization", "Developer Relations"],
+  },
+  {
     title: "Feature Navigator",
     description:
       "Feature Navigator is a tool for exploring and managing features in HPE Aruba Networking Wireless and Wired products.",

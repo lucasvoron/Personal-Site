@@ -26,6 +26,18 @@ export const designCompanies = [
     accent: "#00a96e",
   },
   {
+    id: "sift-stack",
+    name: "Sift Stack",
+    logo: "/design/sift-stack/siftLogo.png",
+    accent: "#ff5b24",
+  },
+  {
+    id: "lsv-analytics",
+    name: "LSV Analytics",
+    logo: "/design/lsv-analytics/lsv-analytics-logo.png",
+    accent: "#00f2ff",
+  },
+  {
     id: "color-harmonie",
     name: "color harmonie",
     logo: "/design/color-harmonie/color_harmonie.svg",
@@ -125,9 +137,39 @@ export const villaDeCycasDesignProjects = [
   },
 ];
 
+export const siftStackDesignProjects = [
+  {
+    id: "sift-stack",
+    title: "Sift Stack",
+    description:
+      "A web application designed to help users sift through large hardware datasets and extract meaningful insights. The platform provides advanced filtering, sorting, and visualization tools, enabling users to quickly identify trends and patterns within their hardware data.",
+    wireframes: [
+      "/design/sift-stack/sift-01.png",
+      "/design/sift-stack/sift-02.png",
+      "/design/sift-stack/sift-03.png",
+    ],
+  },
+];
+
+export const lsvAnalyticsDesignProjects = [
+  {
+    id: "lsv-analytics",
+    title: "LSV Analytics",
+    description:
+      "A data analytics platform designed for TikTok, providing users with powerful tools to analyze and visualize complex datasets. The platform includes dashboards, real-time data processing, and advanced scheduling features, allowing users to make informed decisions based on their TikTok data.",
+    wireframes: [
+      "/design/lsv-analytics/lsv-analytics-01.png",
+      "/design/lsv-analytics/lsv-analytics-02.png",
+      "/design/lsv-analytics/lsv-analytics-03.png",
+    ],
+  },
+];
+
 /** Convenience lookup: company id → projects array */
 export const designProjectsByCompany = {
   hpe: hpeDesignProjects,
+  "sift-stack": siftStackDesignProjects,
   "color-harmonie": colorHarmonieDesignProjects,
   "villa-de-cycas": villaDeCycasDesignProjects,
+  "lsv-analytics": lsvAnalyticsDesignProjects,
 };
